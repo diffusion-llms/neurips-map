@@ -1,0 +1,13 @@
+[
+  {"kind": "tutorial", "id": 137696, "rel": "core", "venue": "Sydney", "web": "https://d-llms.com/neurips26/"},
+  {"kind": "workshop", "id": 137483, "rel": "core", "venue": "Sydney"},
+  {"kind": "workshop", "id": 137507, "rel": "core", "venue": "Sydney"},
+  {"kind": "workshop", "id": 137635, "rel": "related", "venue": "Paris",
+   "note": "Theory of generative models, including diffusion and discrete generation."},
+  {"kind": "workshop", "id": 137519, "rel": "related", "venue": "Sydney",
+   "note": "Stochastic processes behind diffusion models, from theory to science."},
+  {"kind": "workshop", "id": 137569, "rel": "related", "venue": "Atlanta",
+   "note": "Generative biomolecular design, where discrete sequence diffusion is common."},
+  {"kind": "tutorial", "id": 137747, "rel": "related", "venue": "Paris",
+   "note": "Free-energy view of generative models, diffusion included."}
+]

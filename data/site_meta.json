@@ -1,0 +1,30 @@
+{
+  "title": "NeurIPS 2026 Discrete Diffusion Map",
+  "venues": [
+    {"key": "Sydney", "role": "Main venue", "range": "6–12 Dec", "tz": "Australia/Sydney", "abbr": "AEDT",
+     "days": {"2026-12-06": "Expo", "2026-12-07": "Tutorials", "2026-12-08": "Main conference", "2026-12-09": "Main conference",
+              "2026-12-10": "Main conference", "2026-12-11": "Workshops", "2026-12-12": "Workshops"}},
+    {"key": "Atlanta", "role": "Satellite", "range": "9–13 Dec", "tz": "America/New_York", "abbr": "EST",
+     "days": {"2026-12-09": "Main conf. + tutorials", "2026-12-10": "Main conference", "2026-12-11": "Main conference",
+              "2026-12-12": "Workshops", "2026-12-13": "Workshops"}},
+    {"key": "Paris", "role": "Satellite", "range": "9–13 Dec", "tz": "Europe/Paris", "abbr": "CET",
+     "days": {"2026-12-09": "Main conf. + tutorials", "2026-12-10": "Main conference", "2026-12-11": "Main conference",
+              "2026-12-12": "Workshops", "2026-12-13": "Workshops"}}
+  ],
+  "dates": ["2026-12-06", "2026-12-07", "2026-12-08", "2026-12-09", "2026-12-10", "2026-12-11", "2026-12-12", "2026-12-13"],
+  "cats": [
+    {"key": "theory", "label": "Theory & foundations"},
+    {"key": "training", "label": "Modeling & training"},
+    {"key": "sampling", "label": "Fast sampling & inference"},
+    {"key": "reasoning", "label": "Reasoning, RL & alignment"},
+    {"key": "control", "label": "Guidance & control"},
+    {"key": "multimodal", "label": "Vision & multimodal"},
+    {"key": "science", "label": "Bio, chemistry & graphs"},
+    {"key": "apps", "label": "Code & applications"},
+    {"key": "safety", "label": "Safety & evaluation"}
+  ],
+  "sources": [
+    {"label": "NeurIPS 2026 virtual site", "url": "https://neurips.cc/virtual/2026/papers.html"},
+    {"label": "NeurIPS 2026 dates", "url": "https://neurips.cc/Conferences/2026/Dates"}
+  ]
+}
