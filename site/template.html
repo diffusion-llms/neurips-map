@@ -1,0 +1,954 @@
+<title>Discrete Diffusion at NeurIPS 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Every discrete diffusion paper, tutorial and workshop at NeurIPS 2026 (Sydney, Atlanta, Paris), with schedules and a personal agenda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+/* Visual language follows the Principles of Diffusion Models tutorial site (d-llms.com/neurips26):
+   an all-ink page, serif display type, mono labels, indigo/teal accents and a denoising-grid hero.
+   The page is dark in every colour scheme, like that site. Venue colours are reserved for data. */
+:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --bg-2: #141b33;
+  --surface: #11172b;
+  --surface-2: #19203a;
+  --ink: #eef0f8;
+  --ink-2: #aab0c6;
+  --muted: #8890b0;
+  --label: #a7adc4;
+  --line: rgba(255,255,255,.14);
+  --line-soft: rgba(255,255,255,.08);
+  --line-2: rgba(255,255,255,.24);
+  --accent: #5b53ff;
+  --accent-lt: #a09bff;
+  --teal: #12b3a6;
+  --teal-lt: #4fd6cb;
+  --pick: #e0b055;
+  --sydney: #3987e5;
+  --atlanta: #d95926;
+  --paris: #199e70;
+  --r: 14px;
+  --navh: 68px;
+  --maxw: 1180px;
+  --pad: clamp(16px, 4vw, 48px);
+  --shadow: 0 12px 34px -18px rgba(0,0,0,.7);
+  --f-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body: "Newsreader", Georgia, serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; } }
+:root[data-theme="dark"], :root[data-theme="light"] { color-scheme: dark; }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden; }
+a { color: inherit; }
+button, input, select { font: inherit; color: inherit; }
+::selection { background: var(--accent); color: #fff; }
+:focus-visible { outline: 2.5px solid var(--accent-lt); outline-offset: 3px; border-radius: 3px; }
+[hidden] { display: none !important; }
+h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 600; line-height: 1.12; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-left: max(var(--pad), env(safe-area-inset-left, 0px)); padding-right: max(var(--pad), env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--f-mono); font-size: .84em; letter-spacing: .01em; }
+.muted { color: var(--muted); }
+.skip { position: absolute; left: -999px; top: 0; background: var(--accent); color: #fff; padding: 12px 18px; z-index: 200; border-radius: 0 0 8px 0; font: 500 13px var(--f-mono); }
+.skip:focus { left: 0; }
+
+/* ---------- shared type */
+.eyebrow { font-family: var(--f-mono); font-weight: 400; line-height: 1.6; font-size: 12.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--label); display: inline-flex; align-items: center; gap: .7em; margin: 0 0 18px; }
+.eyebrow::before { content: ""; width: 26px; height: 1px; background: rgba(255,255,255,.22); display: inline-block; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* ---------- buttons */
+.btn { display: inline-flex; align-items: center; gap: .55em; font: 500 12.5px var(--f-mono); letter-spacing: .04em; padding: 10px 16px; border-radius: 999px; text-decoration: none; border: 1px solid var(--line-2); background: transparent; color: var(--ink); cursor: pointer; white-space: nowrap; transition: transform .18s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease, color .2s ease; }
+.btn:hover { border-color: var(--accent-lt); color: var(--accent-lt); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 10px 24px -10px rgba(91,83,255,.7); }
+.btn.primary:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 16px 30px -12px rgba(91,83,255,.8); }
+.btn.lg { padding: 14px 22px; font-size: 13.5px; }
+.btn.ghost-hero { color: #fff; border-color: rgba(255,255,255,.4); }
+.btn.ghost-hero:hover { color: var(--accent-lt); border-color: var(--accent-lt); transform: translateY(-2px); }
+.btn[aria-pressed="true"] { border-color: var(--pick); color: var(--pick); background: rgba(224,176,85,.1); }
+.btn:disabled { opacity: .45; cursor: default; transform: none; }
+.btn .arr { font-size: 1.05em; line-height: 1; }
+
+/* ---------- nav */
+header.nav { position: fixed; inset: 0 0 auto 0; z-index: 100; padding-top: env(safe-area-inset-top, 0px); border-bottom: 1px solid transparent; transition: background .3s ease, box-shadow .3s ease, border-color .3s ease; }
+header.nav.scrolled { background: rgba(11,16,32,.84); -webkit-backdrop-filter: saturate(160%) blur(12px); backdrop-filter: saturate(160%) blur(12px); border-bottom-color: rgba(255,255,255,.1); box-shadow: 0 1px 20px -12px rgba(0,0,0,.8); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; height: var(--navh); max-width: var(--maxw); margin: 0 auto; padding-left: max(var(--pad), env(safe-area-inset-left, 0px)); padding-right: max(var(--pad), env(safe-area-inset-right, 0px)); }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: #f5f2ec; font: 13px/1.15 var(--f-mono); letter-spacing: .02em; white-space: nowrap; }
+.brand .mark { width: 26px; height: 26px; flex: none; border-radius: 7px; }
+.brand b { font-weight: 600; }
+.brand .sub { color: var(--accent-lt); }
+.nav-links { display: flex; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
+.nav-links a { display: inline-flex; align-items: center; gap: 7px; font: 500 12px var(--f-mono); letter-spacing: .05em; text-transform: uppercase; text-decoration: none; color: rgba(245,242,236,.82); padding: 8px 11px; border-radius: 8px; transition: color .2s ease, background .2s ease; white-space: nowrap; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--accent-lt); background: rgba(160,155,255,.1); }
+.nav-links a.cta { color: #fff; background: var(--accent); margin-left: 6px; }
+.nav-links a.cta:hover { background: #4a42e6; color: #fff; }
+.nav-links a.cta[aria-current="page"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--accent-lt); }
+.nav-links .count { font-size: 10.5px; opacity: .75; letter-spacing: 0; }
+.nav-links .count:empty { display: none; }
+.tzpick { display: flex; align-items: center; margin-left: 8px; }
+.tzpick select { background: transparent; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; padding: 6px 10px; font: 500 12px var(--f-mono); color: #f5f2ec; cursor: pointer; }
+.tzpick select option { background: var(--bg-2); color: var(--ink); }
+.nav-toggle { display: none; background: none; border: 1px solid rgba(245,242,236,.3); color: #f5f2ec; width: 42px; height: 42px; border-radius: 10px; font-size: 20px; cursor: pointer; align-items: center; justify-content: center; position: relative; z-index: 130; }
+.nav-back { position: fixed; top: 0; left: 0; width: 100vw; height: 100dvh; background: rgba(11,16,32,.55); z-index: 110; -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
+
+/* ---------- hero (denoising grid) */
+.hero { position: relative; background: var(--bg); color: #fff; overflow: hidden; isolation: isolate; }
+#hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: .55; }
+.hero-veil { position: absolute; inset: 0; z-index: 1; background:
+  radial-gradient(120% 90% at 20% 15%, rgba(11,16,32,.15), rgba(11,16,32,.72) 62%, rgba(11,16,32,.94) 100%),
+  linear-gradient(180deg, rgba(11,16,32,.55) 0%, rgba(11,16,32,.2) 40%, rgba(11,16,32,.85) 100%); }
+.hero-inner { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; min-height: min(100svh, 880px); padding: calc(env(safe-area-inset-top, 0px) + 140px) max(var(--pad), env(safe-area-inset-right, 0px)) 104px max(var(--pad), env(safe-area-inset-left, 0px)); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.kicker { font: 400 clamp(13px, 1.4vw, 16px) var(--f-mono); letter-spacing: .2em; text-transform: uppercase; color: var(--accent-lt); margin: 0 0 30px; display: flex; align-items: center; justify-content: center; gap: .8em; flex-wrap: wrap; }
+.kicker .kdot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-lt); box-shadow: 0 0 12px var(--teal-lt); }
+.hero h1 { font-size: clamp(40px, 7.2vw, 92px); line-height: 1.04; letter-spacing: -.03em; }
+.hero h1 .ln { display: block; }
+.hero h1 .grad { background: linear-gradient(100deg, var(--accent-lt), var(--teal-lt)); -webkit-background-clip: text; background-clip: text; color: transparent; font-style: italic; font-weight: 400; padding-right: .06em; }
+.hchips { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 44px 0 40px; }
+.hchip { display: flex; flex-direction: column; gap: 3px; padding: 12px 18px; border: 1px solid rgba(255,255,255,.16); border-radius: 12px; background: rgba(255,255,255,.03); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); text-align: left; }
+.hchip .k { font: 400 10.5px var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: #9098b6; }
+.hchip .v { font: 600 19px var(--f-display); color: #fff; letter-spacing: -.01em; }
+.hchip.accent { border-color: rgba(160,155,255,.5); background: rgba(91,83,255,.12); }
+.hchip.accent .v { color: var(--accent-lt); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: center; }
+.scroll-hint { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 2; font: 400 10.5px var(--f-mono); letter-spacing: .2em; text-transform: uppercase; color: #8890b0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.scroll-hint .line { width: 1px; height: 36px; background: linear-gradient(var(--accent-lt), transparent); animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: .3; transform: scaleY(.6); } 50% { opacity: 1; transform: scaleY(1); } }
+
+/* ---------- views */
+.view { padding-block: clamp(64px, 9vw, 112px) 96px; border-top: 1px solid rgba(255,255,255,.08); }
+body:not(.home) .view { padding-top: calc(env(safe-area-inset-top, 0px) + var(--navh) + clamp(36px, 6vw, 64px)); border-top: 0; }
+.vhead, #f-active { scroll-margin-top: calc(env(safe-area-inset-top, 0px) + var(--navh) + 24px); }
+.vhead { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 22px; }
+
+/* filters: one row, wraps */
+.filters { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: center; padding: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+.search { flex: 1 1 280px; min-width: 0; position: relative; }
+.search input { width: 100%; padding: 10px 16px 10px 40px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.04); color: var(--ink); font-size: 16px; font-family: var(--f-body); }
+.search input::placeholder { color: var(--muted); }
+.search input:focus { border-color: var(--accent-lt); outline: none; box-shadow: 0 0 0 3px rgba(160,155,255,.2); }
+.search svg { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+.seg { display: inline-flex; border: 1px solid var(--line-2); border-radius: 999px; padding: 3px; gap: 2px; flex: none; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+.seg::-webkit-scrollbar { display: none; }
+.seg button { border: 0; background: transparent; padding: 6px 12px; border-radius: 999px; font: 500 11.5px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); cursor: pointer; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+.seg button:hover { color: var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+.seg button[aria-pressed="true"] .dot { box-shadow: 0 0 0 2px var(--accent); }
+.sel { border: 1px solid var(--line-2); border-radius: 999px; padding: 7px 12px; background: transparent; font: 500 11.5px var(--f-mono); letter-spacing: .04em; color: var(--ink); cursor: pointer; }
+.sel option { background: var(--bg-2); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.chip { border: 1px solid var(--line); background: rgba(255,255,255,.03); border-radius: 999px; padding: 5px 14px; font: 400 15px var(--f-body); cursor: pointer; display: inline-flex; gap: 8px; align-items: baseline; color: var(--ink-2); transition: border-color .18s ease, color .18s ease, background .18s ease; }
+.chip:hover { border-color: var(--accent-lt); color: var(--ink); }
+.chip .n { font: 500 11px var(--f-mono); color: var(--muted); }
+.chip[aria-pressed="true"] { background: rgba(91,83,255,.2); border-color: var(--accent-lt); color: #fff; }
+.chip[aria-pressed="true"] .n { color: var(--accent-lt); }
+.chip:disabled { opacity: .4; cursor: default; }
+.chip:disabled:hover { border-color: var(--line); color: var(--ink-2); }
+.active-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; font: 500 11.5px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.active-filters .x { border: 1px dashed var(--line-2); border-radius: 999px; padding: 4px 12px; background: transparent; cursor: pointer; color: var(--ink); font: 500 11.5px var(--f-mono); letter-spacing: .02em; text-transform: none; }
+.active-filters .x:hover { border-color: var(--accent-lt); color: var(--accent-lt); }
+.resline { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 30px 0 4px; }
+.resline b { font: 600 22px var(--f-display); color: #fff; }
+
+/* session group */
+.group { margin-top: 26px; }
+.group-h { display: flex; align-items: baseline; gap: 4px 14px; flex-wrap: wrap; padding: 14px 2px 10px; border-bottom: 1px solid var(--line); position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--navh)); background: var(--bg); z-index: 5; }
+.group-h h3 { font-size: 20px; display: flex; align-items: center; gap: 9px; color: #fff; }
+.group-h .when { font: 500 12.5px var(--f-mono); color: var(--accent-lt); letter-spacing: .03em; }
+.group-h .n { margin-left: auto; font: 500 12px var(--f-mono); color: var(--muted); }
+
+/* paper card */
+.cards { display: grid; gap: 12px; margin-top: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px 20px; display: grid; gap: 9px; min-width: 0; transition: border-color .2s ease, box-shadow .2s ease; }
+.card:hover { border-color: rgba(160,155,255,.55); box-shadow: var(--shadow); }
+.card.picked { border-color: var(--pick); box-shadow: inset 3px 0 0 var(--pick); }
+.card-top { display: flex; gap: 12px; align-items: flex-start; }
+.card-top .meta { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font: 500 11px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+.card h4 { font-size: 20.5px; line-height: 1.25; color: #fff; text-wrap: pretty; }
+.card h4 button { all: unset; cursor: pointer; }
+.card h4 button:hover { color: var(--accent-lt); }
+.card h4 button:focus-visible { outline: 2.5px solid var(--accent-lt); outline-offset: 3px; border-radius: 3px; }
+.authors { font-size: 15px; color: var(--ink-2); line-height: 1.45; }
+.authors .more { color: var(--muted); }
+.tldr { margin: 0; font-size: 16.5px; color: #dfe2f0; line-height: 1.5; }
+.where { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 15px; color: var(--ink-2); align-items: center; }
+.where .w { display: inline-flex; align-items: center; gap: 7px; }
+.where .mono { color: var(--accent-lt); }
+.badge { display: inline-flex; align-items: center; gap: 5px; font: 500 10px/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--label); white-space: nowrap; }
+.badge.oral { color: var(--teal-lt); border-color: rgba(79,214,203,.45); background: rgba(18,179,166,.12); }
+.badge.oral::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--teal-lt); }
+.badge.spot { color: var(--accent-lt); border-color: rgba(160,155,255,.45); background: rgba(91,83,255,.14); }
+.badge.sm { font-size: 9px; padding: 3px 7px; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { font: 500 11.5px var(--f-mono); color: var(--ink-2); background: rgba(255,255,255,.05); border: 1px solid var(--line-soft); border-radius: 999px; padding: 2px 9px; cursor: pointer; }
+.tag:hover { color: #fff; border-color: var(--line-2); }
+.tag[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font: 500 12.5px var(--f-mono); }
+.actions a { color: var(--accent-lt); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; text-decoration-color: rgba(160,155,255,.4); transition: color .18s ease, text-decoration-color .18s ease; }
+.actions a:hover { color: #fff; text-decoration-color: #fff; }
+details.abs summary { cursor: pointer; list-style: none; font: 500 12px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent-lt); display: inline-flex; align-items: center; gap: 8px; }
+details.abs summary::-webkit-details-marker { display: none; }
+details.abs summary::after { content: "+"; font-size: 15px; line-height: 1; transition: transform .2s ease; }
+details.abs[open] { flex-basis: 100%; }
+details.abs[open] summary::after { transform: rotate(45deg); }
+details.abs p { margin: 10px 0 2px; font: 400 16px/1.6 var(--f-body); letter-spacing: 0; text-transform: none; color: var(--ink-2); max-width: 85ch; }
+.star { flex: none; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line-2); background: transparent; cursor: pointer; display: grid; place-items: center; color: var(--muted); transition: color .18s ease, border-color .18s ease, background .18s ease; }
+.star:hover { color: var(--pick); border-color: var(--pick); }
+.star[aria-pressed="true"] { color: var(--pick); border-color: var(--pick); background: rgba(224,176,85,.12); }
+.star svg { width: 17px; height: 17px; }
+.empty { padding: 44px 20px; text-align: center; color: var(--ink-2); border: 1px dashed var(--line-2); border-radius: var(--r); background: rgba(255,255,255,.02); }
+.empty h3 { font-size: 24px; margin-bottom: 8px; color: #fff; }
+.empty p { margin: 0 0 14px; }
+
+/* ---------- schedule */
+.weekwrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
+table.week { border-collapse: collapse; width: 100%; min-width: 1000px; font-size: 13px; table-layout: fixed; }
+table.week col.vcol { width: 136px; }
+table.week th, table.week td { border-right: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); padding: 10px 9px; vertical-align: top; text-align: left; }
+table.week tr > *:last-child { border-right: 0; }
+table.week tbody tr:last-child > * { border-bottom: 0; }
+table.week thead th { font: 500 10.5px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); background: rgba(255,255,255,.02); }
+table.week thead th b { display: block; color: #fff; font: 600 17px var(--f-display); letter-spacing: -.01em; text-transform: none; margin-bottom: 2px; }
+table.week tbody th { font: 600 17px var(--f-display); color: #fff; }
+table.week tbody th small { display: block; font: 400 10.5px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+table.week td.off { background: repeating-linear-gradient(135deg, transparent 0 6px, rgba(255,255,255,.035) 6px 7px); }
+.phase { font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.slot { display: block; width: 100%; text-align: left; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.03); padding: 6px 8px; margin-top: 6px; cursor: pointer; font: 400 13.5px/1.35 var(--f-body); color: var(--ink); }
+.slot:hover { border-color: var(--accent-lt); }
+.slot b { font-weight: 500; }
+.slot .mono { color: var(--accent-lt); font-size: 11px; display: block; }
+.slot.hl { background: var(--accent); color: #fff; border-color: var(--accent); }
+.slot.hl .mono { color: #fff; opacity: .8; }
+.days { display: grid; gap: 30px; margin-top: 40px; }
+.sched { border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--surface); scroll-margin-top: calc(var(--navh) + 20px); }
+.sched-head { position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; padding: 24px 24px 18px; border-bottom: 1px solid var(--line-soft); background: rgba(255,255,255,.02); }
+.sched-head::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--teal)); }
+.sched-head .pno { font: 500 12px var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--accent-lt); }
+.sched-head h3 { font-size: 26px; margin-top: 6px; color: #fff; }
+.sched-head .inst { font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: flex; flex-direction: column; gap: 4px; text-align: right; }
+.sched-head .inst b { font: 600 18px var(--f-display); letter-spacing: -.01em; text-transform: none; color: #fff; }
+.sched-row { display: grid; grid-template-columns: 138px minmax(0, 1fr) auto; gap: 18px; padding: 16px 24px; border-bottom: 1px solid var(--line-soft); align-items: start; transition: background .18s ease; scroll-margin-top: calc(var(--navh) + 20px); }
+.sched-row:last-child { border-bottom: 0; }
+.sched-row:hover { background: rgba(255,255,255,.03); }
+.sched-row .time { font: 500 14px var(--f-mono); color: var(--accent-lt); letter-spacing: .04em; white-space: nowrap; padding-top: 3px; }
+.sched-row .time small { display: block; color: var(--muted); font-size: 10.5px; letter-spacing: .1em; margin-top: 2px; }
+.sched-row .body { min-width: 0; display: grid; gap: 6px; }
+.sched-row .ttl { font: 600 19px/1.3 var(--f-display); color: #fff; }
+.sched-row .ttl a { text-decoration: none; }
+.sched-row .ttl a:hover { color: var(--accent-lt); }
+.sched-row .sub { font-size: 15px; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
+.sched-row .sub a { color: var(--accent-lt); text-underline-offset: 2px; text-decoration-color: rgba(160,155,255,.4); }
+.pill { font: 500 10.5px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.2); color: var(--label); white-space: nowrap; }
+.pill.core { color: var(--teal-lt); border-color: rgba(79,214,203,.4); }
+.plist { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+.plist li { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 10px; font-size: 15.5px; align-items: baseline; line-height: 1.4; }
+.plist li .mono { color: var(--muted); font-size: 11.5px; }
+.plist button { all: unset; cursor: pointer; color: #dfe2f0; }
+.plist button:hover { color: var(--accent-lt); }
+.plist button:focus-visible { outline: 2.5px solid var(--accent-lt); outline-offset: 2px; }
+.plist .pk { color: var(--pick); }
+details.more summary { cursor: pointer; list-style: none; font: 500 11.5px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent-lt); margin-top: 8px; display: inline-flex; gap: 8px; align-items: center; }
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::after { content: "+"; font-size: 14px; line-height: 1; transition: transform .2s ease; }
+details.more[open] summary::after { transform: rotate(45deg); }
+
+/* ---------- events */
+.ev-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.ev { position: relative; overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 26px 24px 22px; display: grid; gap: 12px; align-content: start; min-width: 0; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; scroll-margin-top: calc(var(--navh) + 20px); }
+.ev:hover { transform: translateY(-3px); border-color: var(--accent-lt); box-shadow: var(--shadow); }
+.ev.core::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--teal)); }
+.ev.feature { grid-column: 1 / -1; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 14px 40px; padding: 32px 30px 28px; }
+.ev.feature .ev-main { display: grid; gap: 12px; align-content: start; }
+.ev h3 { font-size: 23px; line-height: 1.2; color: #fff; }
+.ev.feature h3 { font-size: clamp(26px, 3vw, 34px); }
+.ev .kind { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.ev .facts { display: grid; gap: 8px; font-size: 15.5px; color: var(--ink-2); }
+.ev .facts div { display: flex; gap: 9px; align-items: center; }
+.ev .facts .mono { color: var(--accent-lt); }
+.ev .org { font: 400 12.5px/1.65 var(--f-mono); color: var(--muted); letter-spacing: .02em; }
+.ev p { margin: 0; font-size: 16px; color: var(--ink-2); }
+.ev .note { font-size: 14.5px; color: var(--muted); font-style: italic; }
+.ev-row { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.sect-h { margin: 64px 0 6px; }
+
+/* ---------- paper drawer */
+.scrim { position: fixed; inset: 0; background: rgba(5,8,18,.6); z-index: 145; -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
+.drawer { position: fixed; z-index: 150; top: 0; right: 0; bottom: 0; width: min(620px, 100vw); background: var(--bg-2); border-left: 1px solid var(--line); box-shadow: -30px 0 60px -30px rgba(0,0,0,.6); overflow-y: auto; padding: calc(env(safe-area-inset-top, 0px) + 20px) max(22px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 32px) 24px; display: grid; gap: 16px; align-content: start; }
+.drawer h2 { font-size: 28px; line-height: 1.18; color: #fff; }
+.drawer .close { justify-self: end; }
+.drawer .au { font-size: 16px; color: var(--ink-2); display: grid; gap: 3px; }
+.drawer .au small { font: 400 11.5px var(--f-mono); color: var(--muted); letter-spacing: .02em; }
+.drawer .box { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 6px; font-size: 15.5px; background: rgba(255,255,255,.03); }
+.drawer .box .k { font: 500 11px var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--accent-lt); }
+.drawer .box .mono { color: var(--accent-lt); }
+.drawer p { margin: 0; color: var(--ink-2); font-size: 16.5px; }
+.drawer .tl { color: #dfe2f0; font-size: 17.5px; line-height: 1.5; }
+.drawer .foot { font: 400 11.5px/1.6 var(--f-mono); color: var(--muted); letter-spacing: .02em; }
+.conflict { font: 500 12.5px var(--f-mono); color: var(--pick); display: inline-flex; gap: 7px; align-items: center; }
+.conflict::before { content: "!"; display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: var(--pick); color: var(--bg); font: 700 10px var(--f-mono); flex: none; }
+
+/* ---------- footer */
+footer { background: var(--bg); color: #c6cbde; padding: 44px 0 calc(env(safe-area-inset-bottom, 0px) + 44px); border-top: 1px solid rgba(255,255,255,.1); text-align: center; font-family: var(--f-mono); }
+footer p { margin: 0; }
+.foot-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; }
+.foot-links a { color: #c6cbde; text-decoration: none; transition: color .2s; }
+.foot-bottom { margin: 14px auto 0; font-size: 12.5px; color: #8890b0; line-height: 1.7; max-width: 92ch; }
+.foot-bottom a { color: #c6cbde; text-decoration: underline; text-underline-offset: 3px; }
+footer a:hover { color: var(--accent-lt); }
+
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; box-shadow: 0 0 0 2px var(--surface); }
+.dot.Sydney { background: var(--sydney); } .dot.Atlanta { background: var(--atlanta); } .dot.Paris { background: var(--paris); }
+
+@media (max-width: 1080px) {
+  .nav-links { position: fixed; top: 0; right: 0; height: 100dvh; width: min(84vw, 340px); z-index: 120; background: var(--bg); border-left: 1px solid var(--line-soft); flex-direction: column; align-items: stretch; gap: 2px; padding: calc(env(safe-area-inset-top, 0px) + 92px) max(22px, env(safe-area-inset-right, 0px)) 30px 22px; transform: translateX(100%); visibility: hidden; transition: transform .34s cubic-bezier(.2,.7,.2,1), visibility 0s linear .34s; overflow-y: auto; }
+  .nav-links.open { transform: none; visibility: visible; transition: transform .34s cubic-bezier(.2,.7,.2,1); box-shadow: -30px 0 60px -30px rgba(0,0,0,.6); }
+  .nav-links a { color: #d7dbe9; font-size: 14px; padding: 14px; border-radius: 10px; }
+  .nav-links a.cta { margin: 12px 0 0; justify-content: center; }
+  .tzpick { margin: 18px 0 0; padding: 0 14px; }
+  .nav-toggle { display: inline-flex; }
+}
+@media (max-width: 900px) {
+  body { font-size: 16.5px; }
+  .ev-grid { grid-template-columns: minmax(0, 1fr); }
+  .ev.feature { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 700px) {
+  .hero-inner { padding-top: calc(env(safe-area-inset-top, 0px) + 112px); padding-bottom: 92px; min-height: min(100svh, 760px); }
+  .kicker { display: block; font-size: 12px; letter-spacing: .14em; line-height: 1.7; margin-bottom: 22px; }
+  .kicker .kdot { display: none; }
+  .hero h1 { font-size: clamp(36px, 11vw, 52px); line-height: 1.06; }
+  .hchips { display: grid; grid-template-columns: 1fr 1fr; width: 100%; gap: 10px; margin: 32px 0 32px; }
+  .hchip { padding: 12px 12px; }
+  .hchip .v { font-size: 17px; }
+  .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
+  .hero-actions .btn { justify-content: center; }
+}
+@media (max-width: 640px) {
+  .search { flex-basis: 100%; }
+  .xs-hide { display: none; }
+  .seg button { padding: 6px 10px; }
+  .card { padding: 16px; }
+  .card h4 { font-size: 19px; }
+  .sched-head { padding: 22px 18px 16px; }
+  .sched-row { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; padding: 16px 18px; }
+  .sched-row .time { grid-column: 1 / -1; display: flex; gap: 10px; align-items: baseline; padding-top: 0; }
+  .sched-row .time small { margin-top: 0; }
+  .group-h { position: static; }
+  .plist li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .ev, .ev.feature { padding: 24px 18px 20px; }
+  .scroll-hint { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+</style>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#schedule" aria-label="Discrete Diffusion at NeurIPS 2026, home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1d2645"/><g fill="#5b53ff"><rect x="5" y="5" width="6" height="6" rx="1.4" opacity=".35"/><rect x="13" y="5" width="6" height="6" rx="1.4" opacity=".9"/><rect x="21" y="5" width="6" height="6" rx="1.4" opacity=".5"/></g><g fill="#12b3a6"><rect x="5" y="13" width="6" height="6" rx="1.4" opacity=".85"/><rect x="13" y="13" width="6" height="6" rx="1.4" opacity=".45"/><rect x="21" y="13" width="6" height="6" rx="1.4" opacity=".95"/></g><g fill="#5b53ff"><rect x="5" y="21" width="6" height="6" rx="1.4" opacity=".55"/><rect x="13" y="21" width="6" height="6" rx="1.4" opacity=".95"/><rect x="21" y="21" width="6" height="6" rx="1.4" opacity=".3"/></g></svg>
+      <span><b>Discrete Diffusion</b><br><span class="sub">NeurIPS 2026</span></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <div class="nav-back" id="nav-back" hidden></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#schedule" data-view="schedule">Schedule</a></li>
+      <li><a href="#papers" data-view="papers">Papers<span class="count" id="c-papers"></span></a></li>
+      <li><a href="#events" data-view="events">Tutorials &amp; workshops</a></li>
+      <li><a class="cta" href="#agenda" data-view="agenda">My agenda<span class="count" id="c-agenda"></span></a></li>
+      <li class="tzpick">
+        <select id="tz" aria-label="Show times in">
+          <option value="venue">Venue time</option>
+          <option value="local">My time zone</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="kicker"><span class="kdot" aria-hidden="true"></span> NeurIPS 2026 · Sydney · Atlanta · Paris</p>
+    <h1><span class="ln"><span class="grad">Discrete Diffusion</span></span> <span class="ln">at NeurIPS&nbsp;2026</span></h1>
+    <div class="hchips" id="hchips"></div>
+    <div class="hero-actions">
+      <button class="btn primary lg" type="button" id="to-home">View the schedule <span class="arr" aria-hidden="true">↓</span></button>
+      <a class="btn ghost-hero lg" href="#papers">Browse the papers</a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<main id="main">
+  <!-- SCHEDULE -->
+  <section class="view" id="v-schedule" data-view="schedule">
+    <div class="wrap">
+      <div class="vhead">
+        <h2 class="sr-only">Schedule</h2>
+        <div class="seg" id="s-venue" aria-label="Venue"></div>
+      </div>
+      <div class="weekwrap"><table class="week" id="week"></table></div>
+      <div class="days" id="days"></div>
+    </div>
+  </section>
+
+  <!-- PAPERS -->
+  <section class="view" id="v-papers" data-view="papers" hidden>
+    <div class="wrap">
+      <h2 class="sr-only">Papers</h2>
+      <div class="filters" role="search">
+        <div class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Search titles, authors, abstracts" aria-label="Search titles, authors, affiliations and abstracts" autocomplete="off">
+        </div>
+        <div class="seg" id="f-venue" aria-label="Venue"></div>
+        <div class="seg" id="f-format" aria-label="Format"></div>
+      </div>
+      <div class="chips" id="f-cats" aria-label="Topics"></div>
+      <div class="active-filters" id="f-active" hidden></div>
+      <div class="resline"><b id="res-count"></b>
+        <select class="sel" id="f-sort" aria-label="Sort papers">
+          <option value="time">Sort: by session</option>
+          <option value="topic">Sort: by topic</option>
+          <option value="title">Sort: title A–Z</option>
+        </select>
+      </div>
+      <div id="paper-list"></div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="view" id="v-events" data-view="events" hidden>
+    <div class="wrap">
+      <h2 class="sr-only">Tutorials and workshops</h2>
+      <div id="events-list"></div>
+    </div>
+  </section>
+
+  <!-- AGENDA -->
+  <section class="view" id="v-agenda" data-view="agenda" hidden>
+    <div class="wrap">
+      <div class="vhead" style="justify-content:flex-end">
+        <h2 class="sr-only">My agenda</h2>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" id="copy-agenda" type="button">Copy as text</button>
+          <button class="btn" id="clear-agenda" type="button">Clear</button>
+        </div>
+      </div>
+      <div id="agenda-list"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" id="foot"></div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-modal="true" role="dialog" aria-labelledby="d-title"></aside>
+
+<script id="dd-data" type="application/json">/*__DATA__*/null</script>
+<script>
+(() => {
+"use strict";
+const DATA = JSON.parse(document.getElementById("dd-data").textContent);
+const { meta, papers, events, sessions } = DATA;
+const $ = (s, el = document) => el.querySelector(s);
+const VENUES = meta.venues.map(v => v.key);
+const VMETA = Object.fromEntries(meta.venues.map(v => [v.key, v]));
+const CATS = meta.cats;
+const CATL = Object.fromEntries(CATS.map(c => [c.key, c.label]));
+const USER_TZ = Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC";
+const PBYID = Object.fromEntries(papers.map(p => [p.id, p]));
+const EBYID = Object.fromEntries(events.map(e => [e.id, e]));
+const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- small utils */
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const GREEK = { alpha: "α", beta: "β", gamma: "γ", delta: "δ", epsilon: "ε", varepsilon: "ε", eta: "η", lambda: "λ", mu: "μ", nu: "ν", pi: "π", rho: "ρ", sigma: "σ", tau: "τ", theta: "θ", phi: "φ", varphi: "φ", psi: "ψ", omega: "ω", chi: "χ", kappa: "κ", Delta: "Δ", Omega: "Ω", Sigma: "Σ", Pi: "Π", Gamma: "Γ", infty: "∞", times: "×", to: "→", rightarrow: "→", leftarrow: "←", leq: "≤", geq: "≥", le: "≤", ge: "≥", approx: "≈", ell: "ℓ", cdot: "·", log: "log", star: "⋆", sim: "∼", mid: "|", neq: "≠", in: "∈", sqrt: "√", cdots: "⋯", ldots: "…", dots: "…" };
+const tex = s => !s || (s.indexOf("$") < 0 && s.indexOf("\\") < 0) ? s : s
+  .replace(/\$\$?([^$]{1,160}?)\$\$?/g, (_, inner) => inner
+    .replace(/\\(?:text|mathrm|mathbf|boldsymbol|mathcal|mathit|textbf|texttt|textsc|operatorname|mathbb|bm|emph|textit)\s*\{([^{}]*)\}/g, "$1")
+    .replace(/\\([A-Za-z]+)/g, (m, n) => GREEK[n] ?? n)
+    .replace(/[{}]/g, "").replace(/\\,|\\;|\\!/g, " "))
+  .replace(/\\(?:textbf|textit|emph|texttt)\{([^{}]*)\}/g, "$1");
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+const ICON_STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z" fill="currentColor"/></svg>';
+const ICON_STAR_O = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>';
+const plural = (n, one, many) => `${n} ${n === 1 ? one : (many || one + "s")}`;
+
+/* ---------- time */
+let tzMode = store.get("dd26-tz", "venue");
+const tzFor = v => tzMode === "local" ? USER_TZ : (VMETA[v]?.tz || "UTC");
+const fmtCache = new Map();
+function fmt(iso, tz, opts, loc = "en-GB") {
+  const key = loc + tz + JSON.stringify(opts);
+  if (!fmtCache.has(key)) fmtCache.set(key, new Intl.DateTimeFormat(loc, { timeZone: tz, ...opts }));
+  return fmtCache.get(key).format(new Date(iso));
+}
+const hm = (iso, tz) => fmt(iso, tz, { hour: "2-digit", minute: "2-digit", hour12: false });
+const dayLabel = (iso, tz) => fmt(iso, tz, { weekday: "short", day: "numeric", month: "short" });
+const dateKey = (iso, tz) => fmt(iso, tz, { year: "numeric", month: "2-digit", day: "2-digit" }, "en-CA");
+function tzAbbr(v, iso) {
+  if (tzMode === "venue" && VMETA[v]) return VMETA[v].abbr;
+  try { return new Intl.DateTimeFormat("en-US", { timeZone: USER_TZ, timeZoneName: "short" }).formatToParts(new Date(iso)).find(x => x.type === "timeZoneName").value; } catch { return ""; }
+}
+function when(iso, end, v, withDay = true) {
+  if (!iso) return "Time not announced";
+  const tz = tzFor(v);
+  return (withDay ? dayLabel(iso, tz) + ", " : "") + hm(iso, tz) + (end ? "–" + hm(end, tz) : "") + " " + tzAbbr(v, iso);
+}
+
+/* ---------- stars */
+let stars = new Set(store.get("dd26-stars", []));
+const isStar = k => stars.has(k);
+function toggleStar(k) {
+  stars.has(k) ? stars.delete(k) : stars.add(k);
+  store.set("dd26-stars", [...stars]);
+  document.querySelectorAll(`[data-star="${k}"]`).forEach(b => paintStar(b));
+  document.querySelectorAll(`[data-card="${k}"]`).forEach(c => c.classList.toggle("picked", isStar(k)));
+  updateCounts();
+  if (view === "agenda") renderAgenda();
+}
+function paintStar(b) {
+  const on = isStar(b.dataset.star);
+  b.setAttribute("aria-pressed", on);
+  const label = b.dataset.label || "this";
+  if (b.classList.contains("star")) { b.innerHTML = on ? ICON_STAR : ICON_STAR_O; b.title = on ? "Remove from my agenda" : "Add to my agenda"; b.setAttribute("aria-label", (on ? "Remove " : "Add ") + label + (on ? " from" : " to") + " my agenda"); }
+  else b.innerHTML = (on ? ICON_STAR : ICON_STAR_O).replace("<svg", '<svg width="15" height="15"') + (on ? " In my agenda" : " Add to my agenda");
+}
+const starBtn = (k, label) => `<button class="star" type="button" data-star="${k}" data-label="${esc(label)}"></button>`;
+
+/* ---------- shared bits */
+const venueDot = v => v ? `<span class="dot ${v}" aria-hidden="true"></span>` : "";
+const decBadge = (p, sm = false) => p.dec === "oral" ? `<span class="badge oral${sm ? " sm" : ""}">Oral</span>` : p.dec === "spotlight" ? `<span class="badge spot${sm ? " sm" : ""}">Spotlight</span>` : "";
+function authorLine(p, n = 6) {
+  const names = p.au.map(a => esc(a[0]));
+  return names.length <= n ? names.join(", ") : names.slice(0, n).join(", ") + ` <span class="more">+${names.length - n} more</span>`;
+}
+const shortSession = s => (s || "").replace(/^(Sydney|Atlanta|Paris) /, "");
+const ALLV = 'All<span class="xs-hide"> venues</span>';
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+/* ---------- hero */
+function renderHero() {
+  const vfmt = (e, o) => fmt(e.s, VMETA[e.v]?.tz || "UTC", o, "en-US");
+  const tut = events.filter(e => e.rel === "core" && e.kind === "tutorial" && e.s).sort((a, b) => a.s.localeCompare(b.s));
+  const ws = events.filter(e => e.rel === "core" && e.kind === "workshop" && e.s).sort((a, b) => a.s.localeCompare(b.s));
+  const chips = [["Papers", papers.length, true], ["Orals + spotlights", papers.filter(p => p.dec !== "poster").length]];
+  if (tut.length) chips.push([tut.length === 1 ? "Tutorial" : "Tutorials", [...new Set(tut.map(e => vfmt(e, { weekday: "short", month: "short", day: "numeric" })))].join(" · ")]);
+  if (ws.length) {
+    const ds = [...new Set(ws.map(e => vfmt(e, { month: "short", day: "numeric" })))];
+    const sameMonth = ds.every(d => d.split(" ")[0] === ds[0].split(" ")[0]);
+    chips.push([ws.length === 1 ? "Workshop" : "Workshops", sameMonth && ds.length > 1 ? ds[0].split(" ")[0] + " " + ds.map(d => d.split(" ")[1]).join(" & ") : ds.join(" · ")]);
+  }
+  $("#hchips").innerHTML = chips.map(([k, v, acc]) => `<div class="hchip${acc ? " accent" : ""}"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join("");
+  $("#to-home").addEventListener("click", () => $(`#v-${HOME} .vhead`).scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "start" }));
+}
+
+/* hero background: the denoising grid from the tutorial site, paused when off screen */
+const heroGrid = (() => {
+  const canvas = $("#hero-canvas");
+  if (!canvas || !canvas.getContext) return { set() {} };
+  const ctx = canvas.getContext("2d");
+  const COLORS = ["#5b53ff", "#6f77ff", "#12b3a6", "#2b3663", "#3a4680"];
+  const REVEAL = 5520, HOLD = 400, FADE = 1100, PERIOD = REVEAL + HOLD + FADE, R_END = REVEAL / PERIOD, H_END = (REVEAL + HOLD) / PERIOD;
+  let W = 0, H = 0, cell = 40, cells = [], raf = null, t0 = null, last = 0, want = false, inView = true;
+  const smooth = t => { t = t < 0 ? 0 : t > 1 ? 1 : t; return t * t * (3 - 2 * t); };
+  function rrect(x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+  function build() {
+    const r = canvas.getBoundingClientRect(); W = r.width; H = r.height;
+    if (!W || !H) return;
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(W * dpr); canvas.height = Math.floor(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cell = Math.max(30, Math.round(Math.min(W, H) / 13));
+    const cols = Math.ceil(W / cell) + 1, rows = Math.ceil(H / cell) + 1;
+    cells = [];
+    for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
+      const f = Math.sin(x * .55) + Math.cos(y * .6 + x * .2);
+      const ci = f > 1.1 ? 0 : f > .4 ? 1 : f < -1.1 ? 2 : f < -.3 ? 3 : 4;
+      const base = (x / cols) * .35 + (y / rows) * .25;
+      cells.push({ x, y, ci, order: Math.max(0, Math.min(1, base + (Math.sin(x * 12.9898 + y * 78.233) * 43758.5453 % 1) * .55)) });
+    }
+  }
+  function paint(progOf) {
+    if (!W || !H) { build(); if (!W) return; }
+    ctx.clearRect(0, 0, W, H);
+    const size = cell * .68, pad = (cell - size) / 2;
+    for (const c of cells) {
+      const pr = progOf(c);
+      if (pr > .02) { ctx.globalAlpha = pr * .9; ctx.fillStyle = COLORS[c.ci]; rrect(c.x * cell + pad, c.y * cell + pad, size, size, size * .22); ctx.fill(); }
+    }
+    ctx.globalAlpha = 1;
+  }
+  const draw = el => { const p = (el % PERIOD) / PERIOD; paint(c => p < R_END ? smooth((p / R_END - c.order) / .16) : p < H_END ? 1 : 1 - smooth(((p - H_END) / (1 - H_END) - (1 - c.order)) / .16)); };
+  const drawStatic = () => paint(c => smooth((.55 - c.order) / .3));
+  function frame(ts) { if (t0 === null) t0 = ts; if (ts - last >= 30) { last = ts; draw(ts - t0); } raf = requestAnimationFrame(frame); }
+  function sync() {
+    const run = want && inView && !document.hidden && !REDUCE;
+    if (run && !raf) { last = 0; raf = requestAnimationFrame(frame); }
+    if (!run && raf) { cancelAnimationFrame(raf); raf = null; }
+  }
+  if ("IntersectionObserver" in window) new IntersectionObserver(es => { inView = es[0].isIntersecting; sync(); }).observe(canvas);
+  document.addEventListener("visibilitychange", sync);
+  let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (!want) return; build(); if (REDUCE) drawStatic(); }, 180); });
+  return { set(on) { want = on; if (on) { build(); if (REDUCE) drawStatic(); } sync(); } };
+})();
+
+/* ---------- nav */
+const nav = $("#nav"), navLinks = $("#nav-links"), navToggle = $("#nav-toggle"), navBack = $("#nav-back");
+const navState = () => nav.classList.toggle("scrolled", scrollY > 40 || view !== HOME);
+addEventListener("scroll", navState, { passive: true });
+function setNav(open) {
+  navLinks.classList.toggle("open", open);
+  navBack.hidden = !open;
+  navToggle.setAttribute("aria-expanded", open);
+  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  navToggle.textContent = open ? "✕" : "☰";
+  document.body.style.overflow = open ? "hidden" : "";
+}
+navToggle.addEventListener("click", () => setNav(!navLinks.classList.contains("open")));
+navBack.addEventListener("click", () => setNav(false));
+navLinks.addEventListener("click", e => { if (e.target.closest("a")) setNav(false); });
+
+/* ---------- papers view */
+const DEFAULT_VENUE = "Sydney";
+const F = { q: "", venue: DEFAULT_VENUE, format: "all", cats: new Set(), tag: "", session: "", sort: "time" };
+function matches(p, ignore = "") {
+  if (ignore !== "venue" && F.venue !== "all" && p.v !== F.venue && p.oral?.v !== F.venue) return false;
+  if (ignore !== "format" && F.format !== "all" && (F.format === "oral" ? p.dec !== "oral" : p.dec === "poster")) return false;
+  if (ignore !== "cats" && F.cats.size && !F.cats.has(p.cat)) return false;
+  if (F.tag && !p.tags.includes(F.tag)) return false;
+  if (F.session && p.ps !== F.session && p.oral?.ses !== F.session) return false;
+  if (F.q) {
+    const hay = p._hay || (p._hay = (p.t + " " + p.au.map(a => a.join(" ")).join(" ") + " " + p.abs + " " + p.tldr + " " + p.tags.join(" ") + " " + p.topic).toLowerCase());
+    for (const w of F.q.toLowerCase().split(/\s+/).filter(Boolean)) if (!hay.includes(w)) return false;
+  }
+  return true;
+}
+function syncFilters() {
+  const segs = [["#f-venue", [["all", ALLV], ...VENUES.map(v => [v, v])], "venue"],
+                ["#f-format", [["all", "All"], ["oral", "Orals"], ["spot", "Orals + spotlights"]], "format"]];
+  for (const [sel, opts, key] of segs) {
+    $(sel).innerHTML = opts.map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${F[key] === v}">${key === "venue" && v !== "all" ? venueDot(v) : ""}${l}</button>`).join("");
+  }
+  $("#q").value = F.q; $("#f-sort").value = F.sort;
+}
+function renderPapers() {
+  const list = papers.filter(p => matches(p));
+  const base = papers.filter(p => matches(p, "cats"));
+  const cc = {}; base.forEach(p => cc[p.cat] = (cc[p.cat] || 0) + 1);
+  $("#f-cats").innerHTML = CATS.map(c => `<button class="chip" type="button" data-cat="${c.key}" aria-pressed="${F.cats.has(c.key)}" ${!cc[c.key] && !F.cats.has(c.key) ? "disabled" : ""}>${c.label}<span class="n">${cc[c.key] || 0}</span></button>`).join("");
+  const act = [];
+  if (F.tag) act.push(`<button class="x" type="button" data-clear="tag">#${esc(F.tag)} ✕</button>`);
+  if (F.session) act.push(`<button class="x" type="button" data-clear="session">${esc(F.session)} ✕</button>`);
+  const anyFilter = F.q || F.venue !== DEFAULT_VENUE || F.format !== "all" || F.cats.size || F.tag || F.session;
+  if (anyFilter) act.push(`<button class="x" type="button" data-clear="all">Reset filters</button>`);
+  $("#f-active").innerHTML = (F.tag || F.session ? "<span>Filtered by</span>" : "") + act.join("");
+  $("#f-active").hidden = !act.length;
+  $("#res-count").textContent = list.length === papers.length ? plural(papers.length, "paper") : `${list.length} of ${papers.length} papers`;
+    const el = $("#paper-list");
+  if (!list.length) { el.innerHTML = `<div class="empty"><h3>No papers match</h3><p>Try fewer words or another venue, or reset the filters.</p><button class="btn" type="button" data-clear="all">Reset filters</button></div>`; return; }
+  if (F.sort === "time") {
+    const groups = new Map();
+    for (const p of list) { const k = p.ps || "Unscheduled"; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(p); }
+    el.innerHTML = [...groups].map(([k, ps]) => {
+      const p0 = ps[0];
+      return `<div class="group"><div class="group-h"><h3>${venueDot(p0.v)}${esc(k)}</h3><span class="when">${p0.s ? esc(when(p0.s, p0.e, p0.v)) : ""}${p0.room ? " · " + esc(p0.room) : ""}</span><span class="n">${ps.length}</span></div><div class="cards">${ps.map(card).join("")}</div></div>`;
+    }).join("");
+  } else {
+    const sorted = [...list].sort(F.sort === "title" ? (a, b) => tex(a.t).localeCompare(tex(b.t)) : (a, b) => CATS.findIndex(c => c.key === a.cat) - CATS.findIndex(c => c.key === b.cat) || (a.s || "").localeCompare(b.s || ""));
+    el.innerHTML = `<div class="cards">${sorted.map(card).join("")}</div>`;
+  }
+  el.querySelectorAll("[data-star]").forEach(paintStar);
+}
+function card(p) {
+  const k = "p:" + p.id;
+  const where = [];
+  if (p.v) where.push(`<span class="w">${venueDot(p.v)}<span>${esc(shortSession(p.ps))} · <span class="mono">${esc(when(p.s, p.e, p.v))}</span>${p.pos ? ` · poster <span class="mono">${esc(p.pos)}</span>` : ""}</span></span>`);
+  if (p.oral) where.push(`<span class="w"><span class="badge">Talk</span><span>${esc(shortSession(p.oral.ses))} · <span class="mono">${esc(when(p.oral.s, p.oral.e, p.oral.v))}</span> · ${esc(p.oral.room)}</span></span>`);
+  return `<article class="card${isStar(k) ? " picked" : ""}" data-card="${k}">
+    <div class="card-top"><div class="meta">${decBadge(p)}<span>${esc(CATL[p.cat] || "")}</span>${p.track !== "Main" ? `<span>· ${esc(p.track)} track</span>` : ""}</div>${starBtn(k, tex(p.t))}</div>
+    <h4><button type="button" data-open="${p.id}">${esc(tex(p.t))}</button></h4>
+    <div class="authors">${authorLine(p)}</div>
+    ${p.tldr ? `<p class="tldr">${esc(tex(p.tldr))}</p>` : ""}
+    <div class="where">${where.join("")}</div>
+    <div class="actions">
+      ${p.abs ? `<details class="abs"><summary>Abstract</summary><p>${esc(tex(p.abs))}</p></details>` : ""}
+      ${p.or ? `<a href="${esc(p.or)}" target="_blank" rel="noopener">OpenReview ↗</a>` : ""}
+      <a href="https://neurips.cc/virtual/2026/poster/${p.id}" target="_blank" rel="noopener">NeurIPS page ↗</a>
+      ${p.code ? `<a href="${esc(p.code)}" target="_blank" rel="noopener">Code ↗</a>` : ""}
+      ${p.tags.length ? `<span class="tags">${p.tags.map(t => `<button class="tag" type="button" data-tag="${esc(t)}" aria-pressed="${F.tag === t}">#${esc(t)}</button>`).join("")}</span>` : ""}
+    </div>
+  </article>`;
+}
+function bindPapers() {
+  let t;
+  $("#q").addEventListener("input", e => { clearTimeout(t); t = setTimeout(() => { F.q = e.target.value.trim(); renderPapers(); }, 120); });
+  for (const [sel, key] of [["#f-venue", "venue"], ["#f-format", "format"]]) {
+    $(sel).addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; F[key] = b.dataset.v; syncFilters(); renderPapers(); });
+  }
+  $("#f-sort").addEventListener("change", e => { F.sort = e.target.value; renderPapers(); });
+  $("#f-cats").addEventListener("click", e => { const b = e.target.closest("[data-cat]"); if (!b) return; const c = b.dataset.cat; F.cats.has(c) ? F.cats.delete(c) : F.cats.add(c); renderPapers(); });
+  $("#v-papers").addEventListener("click", e => {
+    const c = e.target.closest("[data-clear]");
+    if (c) { const w = c.dataset.clear; if (w === "all") Object.assign(F, { q: "", venue: DEFAULT_VENUE, format: "all", tag: "", session: "" }), F.cats.clear(); else F[w] = ""; syncFilters(); renderPapers(); return; }
+    const tg = e.target.closest("[data-tag]");
+    if (tg) { F.tag = F.tag === tg.dataset.tag ? "" : tg.dataset.tag; renderPapers(); }
+  });
+}
+
+/* ---------- schedule view */
+let sVenue = DEFAULT_VENUE;
+function ddBySession() {
+  const m = new Map();
+  for (const p of papers) {
+    if (p.ps) { if (!m.has(p.ps)) m.set(p.ps, []); m.get(p.ps).push(p); }
+    if (p.oral) { const k = p.oral.ses; if (!m.has(k)) m.set(k, []); m.get(k).push(p); }
+  }
+  return m;
+}
+function scheduleItems() {
+  const by = ddBySession(), items = [];
+  for (const s of sessions) {
+    const ps = by.get(s.name); if (!ps) continue;
+    items.push({ type: s.kind, v: s.v, s: s.s, e: s.e, title: s.name, room: s.room || (ps[0].ps === s.name ? ps[0].room : ""), papers: ps, total: s.n });
+  }
+  for (const e of events) items.push({ type: e.kind, v: e.v, s: e.s, e: e.e, title: e.t, room: e.room, ev: e });
+  return items.sort((a, b) => a.s.localeCompare(b.s));
+}
+function groupByDay(items) {
+  const days = new Map();
+  for (const it of items) {
+    const tz = tzFor(it.v), k = it.s ? dateKey(it.s, tz) : "zz";
+    if (!days.has(k)) days.set(k, { wk: it.s ? fmt(it.s, tz, { weekday: "long" }) : "Not yet scheduled", date: it.s ? fmt(it.s, tz, { day: "numeric", month: "long" }) : "To be announced", items: [] });
+    days.get(k).items.push(it);
+  }
+  return [...days].sort((a, b) => a[0].localeCompare(b[0]));
+}
+const dayHead = (d, label, n) => `<div class="sched-head"><div><span class="pno">${esc(d.wk)}</span><h3>${esc(d.date)}</h3></div><span class="inst">${label}<b>${n}</b></span></div>`;
+function renderSchedule() {
+  $("#s-venue").innerHTML = [["all", ALLV], ...VENUES.map(v => [v, v])].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${sVenue === v}">${v !== "all" ? venueDot(v) : ""}${l}</button>`).join("");
+  const items = scheduleItems();
+  // week grid: venue-local days
+  const vs = sVenue === "all" ? meta.venues : meta.venues.filter(v => v.key === sVenue);
+  let h = `<colgroup><col class="vcol">${meta.dates.map(() => "<col>").join("")}</colgroup><thead><tr><th scope="col">Local dates</th>${meta.dates.map(d => { const dt = new Date(d + "T12:00:00Z"); return `<th scope="col"><b>${dt.toLocaleDateString("en-GB", { weekday: "short", timeZone: "UTC" })}</b>${dt.toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" })}</th>`; }).join("")}</tr></thead><tbody>`;
+  for (const v of vs) {
+    h += `<tr><th scope="row"><span style="display:flex;align-items:center;gap:8px">${venueDot(v.key)}${v.key}</span><small>${v.role} · ${v.abbr}</small></th>`;
+    for (const d of meta.dates) {
+      const phase = v.days[d];
+      const its = items.filter(it => it.v === v.key && dateKey(it.s, v.tz) === d);
+      h += `<td class="${phase ? "" : "off"}">${phase ? `<div class="phase">${phase}</div>` : ""}${its.map(it => slotBtn(it, v)).join("")}</td>`;
+    }
+    h += "</tr>";
+  }
+  $("#week").innerHTML = h + "</tbody>";
+  // day-by-day list in display tz
+  const list = items.filter(it => sVenue === "all" || it.v === sVenue);
+  $("#days").innerHTML = groupByDay(list).map(([k, d]) => `<section class="sched day" id="day-${k}">${dayHead(d, d.items.length === 1 ? "Slot" : "Slots", d.items.length)}${d.items.map(itemRow).join("")}</section>`).join("");
+  $("#days").querySelectorAll("[data-star]").forEach(paintStar);
+}
+function slotBtn(it, v) {
+  const t = hm(it.s, v.tz);
+  const label = it.ev ? `<b>${it.type === "tutorial" ? "Tutorial" : "Workshop"}</b> ${esc(shortTitle(it.title))}` : it.type === "oral" ? `<b>${plural(it.papers.length, "talk")}</b> ${esc(shortSession(it.title))}` : `<b>${plural(it.papers.length, "poster")}</b> ${esc(shortSession(it.title))}`;
+  const hl = it.ev && it.ev.rel === "core";
+  return `<button class="slot${hl ? " hl" : ""}" type="button" data-goto="${esc(it.ev ? "e:" + it.ev.id : "s:" + it.title)}"><span class="mono">${t}</span>${label}</button>`;
+}
+const shortTitle = t => t.split(/[:(]/)[0].trim();
+function timeCell(it) {
+  const tz = tzFor(it.v);
+  return `<div class="time">${it.s ? `${hm(it.s, tz)}–${hm(it.e, tz)}<small>${esc(tzAbbr(it.v, it.s))}</small>` : "TBA"}</div>`;
+}
+function itemRow(it) {
+  const tz = tzFor(it.v);
+  if (it.ev) {
+    const e = it.ev;
+    return `<div class="sched-row" id="slot-e-${e.id}">${timeCell(it)}<div class="body"><div class="sub">${venueDot(e.v)}<span>${e.v}</span><span class="pill${e.rel === "core" ? " core" : ""}">${e.kind}</span>${e.room ? `<span>${esc(e.room)}</span>` : ""}</div><div class="ttl"><a href="#events" data-evlink="${e.id}">${esc(e.t)}</a></div><div class="sub">${esc(e.org.slice(0, 6).join(", "))}${e.org.length > 6 ? ` +${e.org.length - 6}` : ""}</div></div>${starBtn("e:" + e.id, e.t)}</div>`;
+  }
+  const ps = [...it.papers].sort((a, b) => (it.type === "oral" ? (a.oral.s).localeCompare(b.oral.s) : (a.pos || "").localeCompare(b.pos || "", undefined, { numeric: true })));
+  const li = p => `<li><span class="mono">${it.type === "oral" ? hm(p.oral.s, tz) : esc(p.pos || "")}</span><span>${isStar("p:" + p.id) ? '<span class="pk" aria-label="starred">★ </span>' : ""}<button type="button" data-open="${p.id}">${esc(tex(p.t))}</button>${p.dec !== "poster" && it.type !== "oral" ? " " + decBadge(p, true) : ""}</span></li>`;
+  const shown = ps.slice(0, 8), rest = ps.slice(8);
+  return `<div class="sched-row" id="slot-s-${slug(it.title)}">${timeCell(it)}<div class="body"><div class="sub">${venueDot(it.v)}<span>${it.v}</span><span class="pill">${it.type === "oral" ? "Oral session" : "Poster session"}</span>${it.room ? `<span>${esc(it.room)}</span>` : ""}</div><div class="ttl">${esc(it.title)}</div><div class="sub">${ps.length} of ${it.total} ${it.type === "oral" ? "talks" : "posters"} are on this site · <a href="#papers" data-sesslink="${esc(it.title)}">open as list</a></div><ul class="plist">${shown.map(li).join("")}</ul>${rest.length ? `<details class="more"><summary>${rest.length} more</summary><ul class="plist">${rest.map(li).join("")}</ul></details>` : ""}</div><span></span></div>`;
+}
+function bindSchedule() {
+  $("#s-venue").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; sVenue = b.dataset.v; renderSchedule(); });
+  $("#week").addEventListener("click", e => {
+    const b = e.target.closest("[data-goto]"); if (!b) return;
+    const g = b.dataset.goto;
+    const target = g.startsWith("e:") ? document.getElementById("slot-e-" + g.slice(2)) : document.getElementById("slot-s-" + slug(g.slice(2)));
+    if (target) { target.scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "center" }); target.animate?.([{ background: "rgba(224,176,85,.18)" }, { background: "transparent" }], { duration: 1400 }); }
+  });
+  $("#days").addEventListener("click", e => {
+    const s = e.target.closest("[data-sesslink]");
+    if (s) { e.preventDefault(); Object.assign(F, { session: s.dataset.sesslink, venue: "all", format: "all", q: "", tag: "", sort: "time" }); F.cats.clear(); syncFilters(); pendingScroll = "#f-active"; location.hash = "#papers"; }
+    const ev = e.target.closest("[data-evlink]");
+    if (ev) { e.preventDefault(); gotoEvent(ev.dataset.evlink); }
+  });
+}
+function gotoEvent(id) { pendingScroll = "#ev-" + id; if (location.hash === "#events") route(); else location.hash = "#events"; }
+
+/* ---------- events view */
+function renderEvents() {
+  const core = events.filter(e => e.rel === "core"), rel = events.filter(e => e.rel !== "core");
+  const tut = core.filter(e => e.kind === "tutorial"), ws = core.filter(e => e.kind === "workshop");
+  $("#events-list").innerHTML = `<div class="ev-grid">${tut.map(e => evCard(e, true)).join("")}${ws.map(e => evCard(e)).join("")}</div>
+    ${rel.length ? `<div class="sect-h"><h3 class="eyebrow">Also relevant</h3></div>
+    <div class="ev-grid">${rel.map(e => evCard(e)).join("")}</div>` : ""}`;
+  $("#events-list").querySelectorAll("[data-star]").forEach(paintStar);
+}
+function evCard(e, feature = false) {
+  const facts = `<div class="facts">
+      <div>${venueDot(e.v)}<span>${e.v}${e.room ? " · " + esc(e.room) : ""}</span></div>
+      <div><span class="mono">${esc(when(e.s, e.e, e.v))}</span></div>
+    </div>`;
+  const links = `<div class="actions">${e.web ? `<a href="${esc(e.web)}" target="_blank" rel="noopener">Website ↗</a>` : ""}<a href="${esc(e.url)}" target="_blank" rel="noopener">NeurIPS page ↗</a>${e.or ? `<a href="${esc(e.or)}" target="_blank" rel="noopener">OpenReview ↗</a>` : ""}</div>`;
+  const label = e.kind === "tutorial" ? "Tutorial" : "Workshop";
+  const head = `<div class="ev-row"><div class="kind"><span class="pill${e.rel === "core" ? " core" : ""}">${label}</span>${e.rel === "core" || !e.note ? "" : `<span class="note">${esc(e.note)}</span>`}</div>${starBtn("e:" + e.id, e.t)}</div>`;
+  const abs = e.abs ? (feature ? `<p>${esc(e.abs)}</p>` : `<details class="abs"><summary>About</summary><p>${esc(e.abs)}</p></details>`) : "";
+  const cls = `ev${e.rel === "core" ? " core" : ""}${feature ? " feature" : ""}`;
+  if (feature) return `<article class="${cls}" id="ev-${e.id}"><div class="ev-main">${head}<h3>${esc(e.t)}</h3><div class="org">${e.org.map(esc).join(" · ")}</div>${abs}</div><div class="ev-main">${facts}${links}</div></article>`;
+  return `<article class="${cls}" id="ev-${e.id}">${head}<h3>${esc(e.t)}</h3>${facts}<div class="org">${e.org.map(esc).join(" · ")}</div>${abs}${links}</article>`;
+}
+
+/* ---------- agenda */
+function agendaItems() {
+  const out = [];
+  for (const k of stars) {
+    const [t, id] = [k.slice(0, 1), k.slice(2)];
+    if (t === "p" && PBYID[id]) {
+      const p = PBYID[id];
+      if (p.s) out.push({ k, s: p.s, e: p.e, v: p.v, title: tex(p.t), kind: "Poster", where: `${shortSession(p.ps)}${p.room ? " · " + p.room : ""}${p.pos ? " · " + p.pos : ""}`, pid: id });
+      if (p.oral) out.push({ k, s: p.oral.s, e: p.oral.e, v: p.oral.v, title: tex(p.t), kind: "Talk", where: `${shortSession(p.oral.ses)} · ${p.oral.room}`, pid: id });
+      if (!p.s && !p.oral) out.push({ k, s: "", e: "", v: p.v, title: tex(p.t), kind: "Poster", where: "Time not announced", pid: id });
+    } else if (t === "e" && EBYID[id]) {
+      const e = EBYID[id];
+      out.push({ k, s: e.s, e: e.e, v: e.v, title: e.t, kind: e.kind === "tutorial" ? "Tutorial" : "Workshop", where: e.room, eid: id });
+    }
+  }
+  out.sort((a, b) => (a.s || "~").localeCompare(b.s || "~"));
+  for (const a of out) a.clash = out.filter(b => b !== a && a.s && b.s && a.s < b.e && b.s < a.e && b.k !== a.k);
+  return out;
+}
+function renderAgenda() {
+  const items = agendaItems(), el = $("#agenda-list");
+  $("#copy-agenda").disabled = $("#clear-agenda").disabled = !items.length;
+  if (!items.length) {
+    el.innerHTML = `<div class="empty"><h3>Nothing starred yet</h3><p>Star papers, talks and workshops with ${ICON_STAR_O.replace("<svg", '<svg width="15" height="15" style="vertical-align:-2px"')} and they will line up here by time, with overlaps flagged.</p><button class="btn primary" type="button" id="seed">Add the tutorial and both workshops</button></div>`;
+    $("#seed").onclick = () => { events.filter(e => e.rel === "core").forEach(e => stars.add("e:" + e.id)); store.set("dd26-stars", [...stars]); updateCounts(); renderAgenda(); };
+    return;
+  }
+  el.innerHTML = `<div class="days" style="margin-top:0">${groupByDay(items).map(([k, d]) => `<section class="sched day">${dayHead(d, "Starred", d.items.length)}${d.items.map(it => {
+    return `<div class="sched-row">${timeCell(it)}<div class="body"><div class="sub">${venueDot(it.v)}<span>${it.v || ""}</span><span class="pill">${it.kind}</span><span>${esc(it.where)}</span></div><div class="ttl">${it.pid ? `<a href="#p-${it.pid}">${esc(it.title)}</a>` : `<a href="#events" data-evlink="${it.eid}">${esc(it.title)}</a>`}</div>${it.clash.length ? `<span class="conflict">Overlaps with ${esc(it.clash.map(c => c.title.length > 48 ? c.title.slice(0, 46) + "…" : c.title).join("; "))}</span>` : ""}</div>${starBtn(it.k, it.title)}</div>`;
+  }).join("")}</section>`).join("")}</div>`;
+  el.querySelectorAll("[data-star]").forEach(paintStar);
+}
+function bindAgenda() {
+  $("#copy-agenda").addEventListener("click", async () => {
+    const lines = agendaItems().map(it => `${it.s ? when(it.s, it.e, it.v) : "TBA"} | ${it.v || ""} | ${it.kind} | ${it.title} | ${it.where}`);
+    const text = "My NeurIPS 2026 discrete diffusion agenda\n\n" + lines.join("\n");
+    const b = $("#copy-agenda");
+    try { await navigator.clipboard.writeText(text); b.textContent = "Copied"; }
+    catch { const ta = document.createElement("textarea"); ta.value = text; ta.style.cssText = "width:100%;height:160px;margin-bottom:16px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;font:13px var(--f-mono)"; ta.setAttribute("aria-label", "Agenda text"); $("#agenda-list").prepend(ta); ta.select(); b.textContent = "Select and copy the text below"; }
+    setTimeout(() => b.textContent = "Copy as text", 2200);
+  });
+  const clr = $("#clear-agenda");
+  clr.addEventListener("click", () => {
+    if (clr.dataset.armed) { stars.clear(); store.set("dd26-stars", []); delete clr.dataset.armed; clr.textContent = "Clear"; updateCounts(); renderAgenda(); return; }
+    clr.dataset.armed = "1"; clr.textContent = "Select again to clear all";
+    setTimeout(() => { delete clr.dataset.armed; clr.textContent = "Clear"; }, 3000);
+  });
+  $("#agenda-list").addEventListener("click", e => { const ev = e.target.closest("[data-evlink]"); if (ev) { e.preventDefault(); gotoEvent(ev.dataset.evlink); } });
+}
+
+/* ---------- paper drawer */
+let lastFocus = null;
+function openPaper(id) {
+  const p = PBYID[id]; if (!p) return;
+  lastFocus = document.activeElement;
+  const k = "p:" + id, d = $("#drawer");
+  const inst = [...new Set(p.au.map(a => a[1]).filter(Boolean))];
+  d.innerHTML = `<button class="btn close" type="button" id="d-close">Close ✕</button>
+    <div class="card-top"><div class="meta">${decBadge(p)}<span>${esc(CATL[p.cat])}</span><span>· ${esc(p.track)} track</span></div></div>
+    <h2 id="d-title">${esc(tex(p.t))}</h2>
+    <div class="au">${p.au.map(a => `<span>${esc(a[0])}${a[1] ? ` <small>${esc(a[1])}</small>` : ""}</span>`).join("")}</div>
+    ${p.tldr ? `<p class="tl">${esc(tex(p.tldr))}</p>` : ""}
+    <div class="box"><span class="k">Poster</span><span>${venueDot(p.v)} ${esc(p.v || "")} · ${esc(shortSession(p.ps) || "Not scheduled")}</span><span class="mono">${esc(when(p.s, p.e, p.v))}</span><span>${esc(p.room || "")}${p.pos ? ` · board <span class="mono">${esc(p.pos)}</span>` : ""}</span></div>
+    ${p.oral ? `<div class="box"><span class="k">Oral talk</span><span>${venueDot(p.oral.v)} ${esc(p.oral.ses)}</span><span class="mono">${esc(when(p.oral.s, p.oral.e, p.oral.v))}</span><span>${esc(p.oral.room)}</span></div>` : ""}
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" type="button" data-star="${k}"></button>${p.or ? `<a class="btn" href="${esc(p.or)}" target="_blank" rel="noopener">OpenReview ↗</a>` : ""}<a class="btn" href="https://neurips.cc/virtual/2026/poster/${p.id}" target="_blank" rel="noopener">NeurIPS page ↗</a>${p.code ? `<a class="btn" href="${esc(p.code)}" target="_blank" rel="noopener">Code ↗</a>` : ""}</div>
+    ${p.abs ? `<div><p class="eyebrow" style="margin-bottom:10px">Abstract</p><p>${esc(tex(p.abs))}</p></div>` : ""}
+    <div class="foot">NeurIPS subject area: ${esc(p.topic || "—")}${inst.length ? ` · ${plural(inst.length, "institution")}` : ""}${p.tags.length ? " · " + p.tags.map(t => "#" + esc(t)).join(" ") : ""}</div>`;
+  d.querySelectorAll("[data-star]").forEach(paintStar);
+  d.hidden = false; $("#scrim").hidden = false;
+  $("#d-close").focus();
+}
+function closePaper() {
+  if ($("#drawer").hidden) return;
+  $("#drawer").hidden = true; $("#scrim").hidden = true;
+  if (location.hash.startsWith("#p-")) safeReplace("#" + (view || HOME));
+  lastFocus?.focus?.();
+}
+
+/* ---------- routing */
+function safeReplace(h) { try { history.replaceState(null, "", h); } catch {} }
+let view = "", pendingScroll = "";
+const VIEWS = ["schedule", "papers", "events", "agenda"];
+const HOME = "schedule";
+function route() {
+  const h = location.hash.slice(1);
+  if (h.startsWith("p-")) { if (!view) show("papers"); openPaper(h.slice(2)); return; }
+  closePaper();
+  show(VIEWS.includes(h) ? h : HOME);
+}
+function show(v) {
+  const changed = v !== view;
+  view = v;
+  document.body.classList.toggle("home", v === HOME);
+  $("#hero").hidden = v !== HOME;
+  heroGrid.set(v === HOME);
+  document.querySelectorAll(".view").forEach(s => s.hidden = s.dataset.view !== v);
+  document.querySelectorAll("#nav-links a[data-view]").forEach(a => a.dataset.view === v ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
+  if (v === "papers") renderPapers();
+  if (v === "schedule") renderSchedule();
+  if (v === "events") renderEvents();
+  if (v === "agenda") renderAgenda();
+  if (pendingScroll) {
+    const t = $(pendingScroll); pendingScroll = "";
+    if (t) requestAnimationFrame(() => t.scrollIntoView({ block: t.classList.contains("ev") ? "center" : "start" }));
+  } else if (changed) scrollTo(0, 0);
+  navState();
+}
+function updateCounts() {
+  $("#c-papers").textContent = papers.length;
+  $("#c-agenda").textContent = stars.size ? stars.size : "";
+}
+
+/* ---------- global events */
+document.addEventListener("click", e => {
+  const s = e.target.closest("[data-star]"); if (s) { toggleStar(s.dataset.star); return; }
+  const o = e.target.closest("[data-open]"); if (o) { lastFocus = o; location.hash = "#p-" + o.dataset.open; return; }
+  if (e.target.id === "d-close" || e.target.id === "scrim") { safeReplace("#" + view); closePaper(); }
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    if (!$("#drawer").hidden) { safeReplace("#" + view); closePaper(); }
+    else if (navLinks.classList.contains("open")) { setNav(false); navToggle.focus(); }
+  }
+  if (e.key === "/" && !/^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement?.tagName || "") && view === "papers") { e.preventDefault(); $("#q").focus(); }
+});
+$("#tz").value = tzMode;
+$("#tz").addEventListener("change", e => { tzMode = e.target.value; store.set("dd26-tz", tzMode); show(view); });
+window.addEventListener("hashchange", route);
+$("#foot").innerHTML = `<p class="foot-links">${meta.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a>`).join('<span aria-hidden="true">·</span>')}<span aria-hidden="true">·</span><a href="https://d-llms.com/neurips26/" target="_blank" rel="noopener">The Principles of Diffusion Models tutorial ↗</a></p>
+  <p class="foot-bottom">Built ${esc(meta.built)} from the official NeurIPS 2026 programme (${meta.totalAccepted.toLocaleString("en-US")} accepted papers screened). Inclusion, topics and one-line summaries are model-assisted and may contain mistakes; the NeurIPS pages are the source of truth for times and rooms. Design adapted from the <a href="https://d-llms.com/neurips26/" target="_blank" rel="noopener">tutorial site ↗</a>.</p>`;
+
+renderHero(); syncFilters(); bindPapers(); bindSchedule(); bindAgenda(); updateCounts(); route();
+})();
+</script>

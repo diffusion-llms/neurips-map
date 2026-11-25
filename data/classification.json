@@ -1,0 +1,4647 @@
+{
+ "137650": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "138992": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139014": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139089": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139147": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139156": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139274": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139319": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139480": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "dllm",
+   "block",
+   "rl"
+  ],
+  "tldr": "Block-R1 formalizes domain block-size conflict in multi-domain RL post-training of diffusion LLMs and releases a dataset plus benchmark."
+ },
+ "139504": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139528": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "benchmark",
+   "masked"
+  ],
+  "tldr": "Diagnostic benchmark mapping 2D densities to binary token sequences, revealing masked diffusion models fail on sharp-boundary targets where autoregressive models succeed."
+ },
+ "139667": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139744": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139779": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139806": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [],
+  "tldr": "Large Minecraft voxel dataset and first large-scale study of discrete versus continuous diffusion for block-level 3D world generation with inpainting."
+ },
+ "139825": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139845": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "139992": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148142": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148143": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148166": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "dllm",
+   "code",
+   "guidance"
+  ],
+  "tldr": "Inference-time neurosymbolic operators steer diffusion language model denoising toward programs satisfying functionality, security and syntax constraints without retraining."
+ },
+ "148169": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "protein",
+   "edit-insert"
+  ],
+  "tldr": "Variable-length protein generation via a learned generalized Poisson insertion process, combined with Euclidean, categorical and Riemannian flows for structure and sequence design."
+ },
+ "148225": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "dllm",
+   "unified-mm"
+  ],
+  "tldr": "VRCD measures visual grounding overlap among tokens committed in parallel and prioritizes visually complementary positions, improving diffusion MLLM parallel decoding accuracy."
+ },
+ "148253": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148255": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "Models graphs via discrete diffusion over edge co-occurrences, giving a permutation-equivariant graph foundation model unifying node, link and graph tasks."
+ },
+ "148270": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148271": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "graph",
+   "block"
+  ],
+  "tldr": "BloGDiT replaces joint denoising with blocked Gibbs-style resampling in Diffusion Transformers, enabling large targeted edits for Sudoku, graph coloring, MIS and MaxCut."
+ },
+ "148278": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [
+   "continuous-text"
+  ],
+  "tldr": "Continuous flow matching in token embedding space for language, decoding to tokens only at the final step, outperforming leading discrete and continuous DLMs."
+ },
+ "148315": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148331": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "masked",
+   "rl",
+   "image-tokens"
+  ],
+  "tldr": "Co-GRPO jointly optimizes masked diffusion model parameters and the token-decoding schedule with trajectory-level GRPO for masked image generation."
+ },
+ "148351": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Masked diffusion for mixed-type data imputation that attaches continuous auxiliary latents to masked entries and keeps observed values fixed by construction."
+ },
+ "148360": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148365": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148368": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "molecule",
+   "protein"
+  ],
+  "tldr": "Finetunes generative models, including discrete diffusion ones, to match target feature distributions using MMD with a score-function estimator and KL regularization."
+ },
+ "148376": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148382": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "MaRK conditions a frozen bidirectional SSM's recurrence, read-in and read-out parameters on diffusion timestep, adapting it to iterative diffusion generation."
+ },
+ "148384": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148419": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148420": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148430": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm"
+  ],
+  "tldr": "Uses diffusion LLMs, which model prompt-response joints, to amortize jailbreak prompt search via conditional generation, yielding transferable low-perplexity attacks."
+ },
+ "148431": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148432": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Repelling intermediate samples in a batch from each other's feature space cheaply boosts diffusion-LM output diversity and Pass@k on code and math."
+ },
+ "148438": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "dllm",
+   "guidance",
+   "masked"
+  ],
+  "tldr": "Deterministic process-reward guidance underperforms independent sampling with outcome reranking in diffusion LLMs because PRM signal decays sharply with mask ratio."
+ },
+ "148440": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148461": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148485": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148486": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148519": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "image-tokens",
+   "benchmark"
+  ],
+  "tldr": "Controlled study showing generation quality of MaskGIT, D3PM and SEDD on medical image tokens depends jointly on tokenizer, generator and sampler settings."
+ },
+ "148526": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148527": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148542": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148543": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148560": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "ctmc",
+   "graph"
+  ],
+  "tldr": "E(2)-equivariant discrete diffusion with a categorical CTMC over edges for TSP and CVRP, outperforming learned solvers with less training data."
+ },
+ "148579": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148607": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148624": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "molecule",
+   "protein"
+  ],
+  "tldr": "Continued pre-training with verifier feedback expands a flow model's generable set beyond training data for molecule, peptide and protein sequence design."
+ },
+ "148666": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148674": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148676": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148682": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148695": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "rl",
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Plug-in GRPO enhancement for diffusion LLMs adding per-token denoising-progress credit assignment and stratified-masking likelihood estimates to reduce mean-field bias."
+ },
+ "148736": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148741": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148776": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148780": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148799": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148840": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148857": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148859": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148878": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "continuous-text",
+   "dfm"
+  ],
+  "tldr": "Spherical von Mises-Fisher flows model categorical sequences on the sphere with closed-form score and predictor-corrector sampling, improving Sudoku and language modeling."
+ },
+ "148881": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "HEDGE generates hypergraphs by diffusing relaxed incidence matrices under a structure-aware heat-plus-Ornstein-Uhlenbeck forward process with closed-form reverse targets."
+ },
+ "148899": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148903": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148904": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148916": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "Size-scalable graph generation via a Jacobi SDE diffusion on graphon space, discretized to finite graphs with provable cross-scale moment matching."
+ },
+ "148935": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "dllm",
+   "hybrid-ar"
+  ],
+  "tldr": "ANCHOR-GEN uses a masked diffusion language model as a clinical planner that anchors an autoregressive decoder for chest X-ray report generation."
+ },
+ "148943": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148951": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "image-tokens"
+  ],
+  "tldr": "LLMCond generates sign-language video end-to-end with a discrete (VQ) diffusion model conditioned on LLM-produced temporally smoothed condition sequences."
+ },
+ "148952": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "unified-mm"
+  ],
+  "tldr": "Omnimodal masked-diffusion backbone over discrete language, vision, goal and action tokens supports action prediction, dynamics prediction and test-time scaling for robots."
+ },
+ "148959": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "148961": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "molecule",
+   "dfm"
+  ],
+  "tldr": "FlashRetro learns finite-interval latent transport for one-step retrosynthesis, outperforming discrete flow-matching and diffusion baselines with ~22-38x faster inference."
+ },
+ "148970": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "masked",
+   "dllm",
+   "rl"
+  ],
+  "tldr": "Masked diffusion LMs serve as steerable text-based world models for agentic RL, beating autoregressive models 4x larger on coherence, groundedness and rollout diversity."
+ },
+ "148994": {
+  "rel": "related",
+  "cat": "control",
+  "tags": [
+   "guidance",
+   "theory"
+  ],
+  "tldr": "Learnable Chernoff Baselines: adaptive rejection sampling for KL-regularized reward alignment with TV guarantees, shown on continuous and discrete diffusion including a dLLM."
+ },
+ "149040": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149041": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149103": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "dllm",
+   "guidance",
+   "masked"
+  ],
+  "tldr": "Exact constrained decoding for diffusion LLMs that samples from the constrained mean-field posterior under any finite-automaton constraint with logarithmic sampling depth."
+ },
+ "149109": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149141": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "block"
+  ],
+  "tldr": "PACE-dLLM fits the per-step confidence cliff in closed form to set elastic block sizes, giving 3-5x throughput gains on LLaDA and Dream."
+ },
+ "149168": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149179": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149202": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "masked",
+   "benchmark"
+  ],
+  "tldr": "DiffScore evaluates text by masked reconstruction with diffusion language models across masking rates, removing the positional bias of autoregressive likelihood scoring."
+ },
+ "149211": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149229": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149232": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "dfm",
+   "edit-insert",
+   "dna"
+  ],
+  "tldr": "Structured couplings, latent edit-based rate parameterization for variable-length generation, and latent classifier-free guidance improve discrete flow matching for DNA and peptide design."
+ },
+ "149240": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149251": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149281": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "uniform",
+   "masked",
+   "theory"
+  ],
+  "tldr": "Bias-variance analysis of transition kernels motivates SemDLM+, a semantic-neighborhood corruption kernel with global transitions balancing masked and uniform diffusion."
+ },
+ "149295": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [],
+  "tldr": "SchedDiff is a discrete ordinal-space diffusion model that iteratively refines operation priorities for job shop scheduling, with gap-insertion decoding."
+ },
+ "149314": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149331": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149356": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "block",
+   "dllm",
+   "caching"
+  ],
+  "tldr": "MAGE reuses sparse-attention KV indices chosen at each block's all-[MASK] first step, giving up to 6.8x long-context speedup for block diffusion LLMs."
+ },
+ "149365": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Infilling-based extraction with arbitrary masks reveals diffusion LLMs like LLaDA and Dream leak up to 3x more memorized training data than prefix probing."
+ },
+ "149410": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "A lightweight single-layer sampler mimics exact joint sampling, letting masked diffusion LMs unmask several tokens per full forward pass with far less distributional drift."
+ },
+ "149418": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149419": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "STDec sets token-adaptive unmasking thresholds from decoded spatial neighbors and cross-step ID stability, giving up to 14x training-free dLLM speedups."
+ },
+ "149422": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "unified-mm"
+  ],
+  "tldr": "Adapts masked diffusion vision-language models to temporal action localization using boundary-aware masking and a step-level IoU reward over jointly editable timestamp tokens."
+ },
+ "149435": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149450": {
+  "rel": "related",
+  "cat": "apps",
+  "tags": [
+   "simplex"
+  ],
+  "tldr": "PreDiff moves sequential-recommendation diffusion from item embedding space to the item distribution simplex, provably preserving rankings better."
+ },
+ "149462": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "Latent graph diffusion in a mixed-curvature product space with Ricci-curvature priors for generating structurally heterogeneous graphs."
+ },
+ "149472": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149475": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149482": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Latent Refinement Decoding keeps masked positions as soft mixtures of predicted tokens before committing, improving LLaDA/Dream accuracy with up to 10.6x speedup."
+ },
+ "149522": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149529": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "graph",
+   "molecule",
+   "rl"
+  ],
+  "tldr": "CoMole builds a motif-aware graph diffusion foundation model for molecules and applies RL over motif-level reverse policies for controllable property-targeted design."
+ },
+ "149538": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149540": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149547": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "MDTIM trains masked diffusion on stochastically discretized time series so imputation becomes direct prediction of [MASK] positions from observed values."
+ },
+ "149555": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149576": {
+  "rel": "related",
+  "cat": "multimodal",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Cross-skeleton motion tokenizer with shared part-level codebook, enabling text-to-motion generation and part-wise editing with a MaskGIT token generator."
+ },
+ "149583": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "Latent sociability prior breaks edge independence in discrete graph diffusion while keeping exchangeability, avoiding the degenerate Erdos-Renyi terminal prior."
+ },
+ "149593": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149604": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "SeqDiCO shifts diffusion from whole-instance solutions to fixed-endpoint sequence subproblems, letting a denoiser trained on 100 nodes solve 10K-node routing instances."
+ },
+ "149614": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149618": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149624": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149626": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149672": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "LLaDA-Guard fine-tunes a masked diffusion LM as a generative safety classifier comparing label-conditioned reconstructions, improving calibration and enabling token-level risk localization."
+ },
+ "149673": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149680": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149694": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149696": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149699": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149715": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149727": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "masked",
+   "dllm",
+   "theory"
+  ],
+  "tldr": "Theoretical account of how shared Transformer parameters and relative positional encodings let forward masked training transfer to reverse queries."
+ },
+ "149733": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149753": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "hybrid-ar"
+  ],
+  "tldr": "HyCO builds a combinatorial-optimization solution prefix with an RL solver then hands off to a conditional diffusion solver, with theory for the optimal switch point."
+ },
+ "149764": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149768": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149806": {
+  "rel": "related",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "image-tokens"
+  ],
+  "tldr": "Discrete training objectives such as MaskGIT's hurt compositional generalization in visual generation; an auxiliary continuous latent objective partially recovers it."
+ },
+ "149812": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Training-free acceleration of multimodal dLLMs via attention-guided visual token pruning and adaptive stopping, giving ~18x speedup on vision-language benchmarks."
+ },
+ "149817": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "theory",
+   "uniform",
+   "masked"
+  ],
+  "tldr": "Small-noise analysis proves discrete diffusion reverse edits separate into a leading support (validity) scale and finer frequency coefficients, differing between uniform and absorbing processes."
+ },
+ "149818": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149825": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149833": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149851": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149877": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149883": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149887": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149899": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149902": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149907": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149909": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149910": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149929": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149936": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149939": {
+  "rel": "related",
+  "cat": "apps",
+  "tags": [],
+  "tldr": "Large Discrete Policy replaces continuous denoising policies with stochastic iterative scoring and pruning over a large vocabulary of plausible discrete actions."
+ },
+ "149940": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149954": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149963": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "theory"
+  ],
+  "tldr": "Proves likelihood-optimal unmasking order is NP-hard and that a tractable surrogate is solved by attention column sums, yielding the training-free Attn-Sampler."
+ },
+ "149995": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149996": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "149999": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [],
+  "tldr": "Shows masked-input regularization, borrowed from diffusion LM masking, improves data-constrained autoregressive pretraining, and proposes a SoftQ scaling law for repeated data."
+ },
+ "150001": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150008": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150015": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150048": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "block",
+   "hybrid-ar",
+   "dllm"
+  ],
+  "tldr": "Post-training converts autoregressive VLMs into block-wise discrete-denoising reasoners, giving ~40x faster long chain-of-thought with cached test-time rethinking rounds to recover accuracy."
+ },
+ "150049": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150058": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150062": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "masked",
+   "continuous-text",
+   "distillation"
+  ],
+  "tldr": "DiLaDiff augments masked diffusion LMs with a consistency-distilled continuous latent prior that captures token correlations, improving quality while accelerating sampling."
+ },
+ "150069": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150079": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150084": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150112": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150113": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150116": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "ctmc",
+   "masked",
+   "uniform"
+  ],
+  "tldr": "LHDLM learns a column-stochastic token-cluster hierarchy as the forward process, preserving a closed-form CTMC ELBO and interpolating between hierarchical and masked diffusion."
+ },
+ "150124": {
+  "rel": "related",
+  "cat": "apps",
+  "tags": [
+   "dfm"
+  ],
+  "tldr": "SDFlow generates time series by flow matching in a frozen VQ latent space with a categorical posterior over codebook indices, removing autoregressive exposure bias."
+ },
+ "150127": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150134": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Parallel Speculative Decoding builds multi-depth drafts from one dLLM forward pass and verifies them hierarchically, reaching 5.5 tokens per forward pass."
+ },
+ "150163": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150165": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150179": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150187": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "Dyson Diffusion models graph adjacency spectra with Dyson Brownian motion plus Lie-group diffusion, giving permutation-invariant graph generation that captures spectra accurately."
+ },
+ "150199": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150215": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150220": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150224": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "dllm",
+   "block",
+   "hybrid-ar"
+  ],
+  "tldr": "FLARE converts hybrid-attention autoregressive LLMs into diffusion LLMs, finding transfer data quality dominates loss and mask design for capability preservation."
+ },
+ "150228": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150232": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150251": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150267": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "masked",
+   "dllm"
+  ],
+  "tldr": "Training-free reranking that discounts token confidence by attention to already-selected positions, improving low-NFE parallel decoding of LLaDA and Dream."
+ },
+ "150305": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "dfm",
+   "rl",
+   "molecule"
+  ],
+  "tldr": "RL fine-tuning of joint continuous-discrete flow matching for 3D molecules, restricting exploration to influential timesteps and calibrating multi-objective advantages."
+ },
+ "150307": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150318": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150338": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150341": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150350": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150361": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Denoising Entropy quantifies cumulative uncertainty along a diffusion-LM decoding path and drives both post-hoc trajectory selection and real-time decoding-order guidance."
+ },
+ "150367": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Leave-One-Out Transformer gives dense all-position supervision for masked diffusion models, enabling self-correction by resampling without a separate corrector."
+ },
+ "150380": {
+  "rel": "related",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "unified-mm"
+  ],
+  "tldr": "DREAM unifies contrastive learning and masked generative text-to-image modeling via a masking-ratio warmup, using text alignment to select partially decoded trajectories."
+ },
+ "150409": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "masked",
+   "theory"
+  ],
+  "tldr": "Uses random k-SAT/XORSAT to show continuous diffusions beat masked discrete diffusion and that variable ordering strongly affects generative accuracy."
+ },
+ "150450": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150491": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150492": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "dfm",
+   "simplex"
+  ],
+  "tldr": "GlycoGen predicts glycan structures from mass spectra with discrete flow matching plus a deterministic 'crystallizing' sampler that snaps and early-exits tokens, beating autoregressive baselines."
+ },
+ "150510": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "dna",
+   "guidance"
+  ],
+  "tldr": "LocoGen reformulates regulatory DNA guidance as locality: an invariance-learned motif mask protects motif positions while out-of-distribution damping applies only to background positions."
+ },
+ "150561": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150596": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150626": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150638": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "rl",
+   "dllm",
+   "hybrid-ar"
+  ],
+  "tldr": "MindRL argues reward only becomes an update through branch-native probability objects, giving a controller that handles autoregressive, parallel-discrete diffusion, flow and hybrid policies."
+ },
+ "150685": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150689": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "masked",
+   "dllm"
+  ],
+  "tldr": "Self-rewarding sequential Monte Carlo runs parallel MDLM sampling particles weighted by trajectory confidence, improving quality without extra training or external rewards."
+ },
+ "150697": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150700": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150707": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150708": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150717": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "protein",
+   "masked"
+  ],
+  "tldr": "Sparse autoencoders on diffusion protein language models reveal catalytic-site features pre-activating at still-masked positions, showing early functional commitment along denoising trajectories."
+ },
+ "150719": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "hybrid-ar"
+  ],
+  "tldr": "Adds a lightweight diffusion head to a frozen autoregressive LLM sharing its KV cache, with exact consensus for lossless parallel decoding up to 7.8x faster."
+ },
+ "150767": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150769": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [
+   "continuous-text",
+   "dfm"
+  ],
+  "tldr": "LangFlow makes embedding-space flow matching for text competitive with discrete diffusion via an ODE-based NLL bound, learnable Gumbel noise schedule and self-conditioning."
+ },
+ "150778": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150791": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Zero-shot uncertainty signals from denoising trajectories and remasking dynamics for hallucination detection in diffusion LLMs, near sampling baselines at 100x less cost."
+ },
+ "150808": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "guidance",
+   "dna",
+   "dllm"
+  ],
+  "tldr": "Contrastive Distribution Matching amortizes twisted SMC for discrete diffusion by learning a twist function, enabling cheap reward-tilted sampling."
+ },
+ "150829": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150864": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150881": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "continuous-text",
+   "dna"
+  ],
+  "tldr": "HELICS tokenizes chromosomes into continuous latent tokens and applies conditional flow matching for biobank-scale conditional synthetic genome generation over 600K SNPs."
+ },
+ "150890": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150894": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150907": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150917": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "dllm"
+  ],
+  "tldr": "ReDiff trains vision-language discrete diffusion models to revise synthetic and self-generated errors, breaking error cascades during parallel decoding."
+ },
+ "150930": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150940": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "150993": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "RAGenCO scales test-time compute for diffusion-based combinatorial optimization solvers by projecting refinement states onto task relaxations before decoding and branching."
+ },
+ "151009": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151020": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "guidance"
+  ],
+  "tldr": "RxDiff recasts medication recommendation as discrete diffusion with a clinically guided forward process and inference-time modulation controlling drug-drug interactions."
+ },
+ "151031": {
+  "rel": "related",
+  "cat": "multimodal",
+  "tags": [
+   "image-tokens"
+  ],
+  "tldr": "NAMVIS replaces diffusion with geometry-conditioned next-scale autoregression over discrete visual tokens, sampling all tokens within each scale in parallel."
+ },
+ "151040": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151044": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151064": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151074": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151086": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151088": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "Continuous flow matching for graphs with optimal-transport coupling and graphette structural priors for motif-rich graph and molecule generation."
+ },
+ "151112": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "theory"
+  ],
+  "tldr": "Mechanistic study showing discrete diffusion beats AR on graph lookahead planning by learning reverse decoding that reduces lookahead to simple transitions."
+ },
+ "151143": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151159": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151173": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151177": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm"
+  ],
+  "tldr": "ReFuse detects dLLM jailbreaks by fusing linear probes on prompt states and pre-decoding masked-response hidden states, cutting LLaDA-8B attack success to 3.3%."
+ },
+ "151199": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151215": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "speech",
+   "masked"
+  ],
+  "tldr": "DELTA-TTS LoRA-adapts a pretrained autoregressive TTS model into a masked diffusion model for confidence-ordered speech-token decoding, lowering WER and running 3.3x faster."
+ },
+ "151218": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151234": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151263": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "block",
+   "hybrid-ar"
+  ],
+  "tldr": "BASTION builds query-dependent, hardware-aware drafting trees from block-diffusion drafters, giving up to 6.6x lossless speculative decoding speedup."
+ },
+ "151266": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151273": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151282": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151303": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151306": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151310": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151328": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151333": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "distillation",
+   "dllm"
+  ],
+  "tldr": "Self-distills a few-step diffusion LLM student to match a full-step teacher's generative trajectory, with reverse-KL DDO, reducing factorization error."
+ },
+ "151339": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151352": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [
+   "simplex",
+   "dna"
+  ],
+  "tldr": "One-step drifting models using kernel-gradient directions, extended to manifolds and to discrete data via Fisher-Rao simplex geometry for DNA and molecules."
+ },
+ "151356": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151374": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "protein",
+   "rl"
+  ],
+  "tldr": "AbSpecAlign post-trains antigen-conditioned antibody generators with GRPO against a contrastive cognate-versus-noncognate specificity reward from a bidirectional multimodal scorer."
+ },
+ "151388": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "protein",
+   "masked"
+  ],
+  "tldr": "Stochastic beam search over 1-edit neighborhoods samples masked protein language models effectively, validated in vitro on real antibody engineering campaigns."
+ },
+ "151391": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151418": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151429": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "masked",
+   "guidance",
+   "dna"
+  ],
+  "tldr": "D-DOIT derives a discrete Doob h-transform that reweights masked-diffusion reverse transitions using reward values only, giving training-free reward adaptation for DNA and protein design."
+ },
+ "151432": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "uniform",
+   "ctmc",
+   "dfm"
+  ],
+  "tldr": "Systematic Hazard Sampling triggers token edits at unit-spaced cumulative-hazard thresholds, minimizing jump-count variance and improving uniform-noise discrete diffusion and flow samplers."
+ },
+ "151450": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151462": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151472": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151485": {
+  "rel": "related",
+  "cat": "apps",
+  "tags": [],
+  "tldr": "DN-Flow decomposes the flow-matching velocity into stable transport and local-refinement branches with column-wise gating for mixed numerical-categorical tabular generation."
+ },
+ "151486": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Lightweight predictor of pairwise token dependencies selects weakly-coupled positions to unmask in parallel, giving 1.7-2.2x speedups on Dream-7B with bounded error."
+ },
+ "151488": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151547": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "Discrete diffusion over phylogenetic tree topologies, generated top-down, middle-out or bottom-up, yields accurate simulation-based posteriors under complex evolutionary models."
+ },
+ "151554": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151572": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151611": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151637": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "block"
+  ],
+  "tldr": "Training-free Bayesian decoding infers block length, boundaries and decoding order, giving flexible variable-length generation for diffusion language models."
+ },
+ "151638": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151640": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151651": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Renoise Consistency enables cheap self-correction in diffusion LLMs by matching training-time noising, plus adaptive block drafting to cut forward steps."
+ },
+ "151676": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151682": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151687": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151694": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151707": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "masked",
+   "dllm"
+  ],
+  "tldr": "Mean-field fixed-point refinement of per-position commit scores coordinates parallel unmasking, letting discrete diffusion LMs commit more tokens per step."
+ },
+ "151709": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151740": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "SCCE treats approximately closed token subsets as sequence-level unmasking units, improving the accuracy-efficiency frontier over token-wise confidence decoding."
+ },
+ "151747": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151775": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151792": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151802": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "masked",
+   "dllm",
+   "theory"
+  ],
+  "tldr": "First theoretical analysis proving entropy-threshold confidence decoding samples diffusion language models accurately in iterations scaling with data entropy."
+ },
+ "151839": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151851": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151868": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151874": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151876": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "CURE re-masks risk-inducing tokens during denoising using a time-conditioned safety value model, cutting jailbreak success rates on diffusion LLMs cheaply."
+ },
+ "151880": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151883": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151885": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151894": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151897": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151900": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151913": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "rl",
+   "dllm",
+   "distillation"
+  ],
+  "tldr": "GDSD casts dLLM reinforcement learning as self-distillation of the denoiser toward an advantage-guided teacher, avoiding ELBO surrogates and improving LLaDA and Dream reasoning."
+ },
+ "151917": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "continuous-text"
+  ],
+  "tldr": "CoBit is a continuous diffusion language model that denoises binary token codes as patches, cutting vocabulary-wide prediction to log-V bit logits with entropy-rate sampling grids."
+ },
+ "151919": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151926": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151939": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151975": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "simplex"
+  ],
+  "tldr": "Rectified flow on the statistical manifold of categorical distributions, learning near-geodesic trajectories for one-step discrete generation across text, images and biology."
+ },
+ "151986": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "151988": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "guidance",
+   "dna",
+   "masked"
+  ],
+  "tldr": "Annealed sequential Monte Carlo over completed sequences steers frozen masked discrete-diffusion and autoregressive DNA generators toward high-reward designs at test time."
+ },
+ "152019": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Unified masked discrete diffusion model for bidirectional text-to-motion and motion-to-text generation, with two-stage training and generation-aware self-correction."
+ },
+ "152028": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152052": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "simplex",
+   "continuous-text",
+   "distillation"
+  ],
+  "tldr": "Continuous flows over one-hot token embeddings match discrete diffusion LMs, and distilled flow maps give one-step text generation beating 8-step discrete few-step models."
+ },
+ "152067": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [
+   "continuous-text"
+  ],
+  "tldr": "RePlaid, a likelihood-trained continuous embedding diffusion LM, scales competitively with discrete DLMs, matching Duo and beating MDLM when over-trained."
+ },
+ "152072": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152079": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152080": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152083": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152102": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Quokka: scaling laws for diffusion language models in compute- and data-constrained regimes, plus guidance on masking, schedules, objectives and regularization."
+ },
+ "152123": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "block",
+   "hybrid-ar",
+   "dllm"
+  ],
+  "tldr": "Adapts AR checkpoints to block diffusion via context-causal attention, AR-guided parallel training, and block-size curriculum, yielding NBDIFF-7B with 32K context."
+ },
+ "152135": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152139": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152155": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152174": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152186": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152191": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "caching"
+  ],
+  "tldr": "Flash-dLLM fuses an IO-aware KV-cache kernel with self-drafting draft-and-verify decoding, giving up to 11x higher dLLM throughput at lower memory."
+ },
+ "152196": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Looping early-middle transformer layers in masked diffusion models matches baseline quality with 3.3x fewer training FLOPs and allows inference-time compute scaling by loop count."
+ },
+ "152230": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152241": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152247": {
+  "rel": "related",
+  "cat": "multimodal",
+  "tags": [
+   "image-tokens"
+  ],
+  "tldr": "Pretrained raster-scan autoregressive image models are cheaply adapted into any-order generators, outperforming MaskGIT at inpainting without discrete-diffusion retraining."
+ },
+ "152252": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152285": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152293": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152296": {
+  "rel": "related",
+  "cat": "multimodal",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "VUM unifies masked image modeling and diffusion denoising in one shared degradation space, letting a single encoder generate and perceive."
+ },
+ "152301": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "ctmc",
+   "guidance"
+  ],
+  "tldr": "Training-free proposal control for Feynman-Kac SMC in discrete diffusion, perturbing reverse jump rates with exact compensation to reduce weight degeneracy."
+ },
+ "152312": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152331": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152336": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152342": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "masked",
+   "continuous-text",
+   "theory"
+  ],
+  "tldr": "Sticky jump diffusions unify masked, continuous and hybrid diffusion as limits of a jump-diffusion over token-embedding anchors, trained via denoising hazard matching."
+ },
+ "152354": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152356": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "masked",
+   "rl"
+  ],
+  "tldr": "Masked discrete diffusion driving planner whose in-place token AutoEdit revision is trained by full-rollout reinforcement learning, reaching 91.0 PDMS on NAVSIM."
+ },
+ "152368": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152384": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152390": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "guidance"
+  ],
+  "tldr": "DiffCool casts chip heat-sink synthesis as a constrained discrete denoising process with manufacturing-aware state transitions and a differentiable thermal surrogate, needing no labeled designs."
+ },
+ "152405": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152430": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152435": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152440": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "rl",
+   "molecule",
+   "protein"
+  ],
+  "tldr": "GRPO-style RL with set-level diversity rewards for molecule and protein generators, instantiated on both autoregressive and discrete diffusion models via Coupled-GRPO."
+ },
+ "152458": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152468": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152472": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "masked",
+   "dllm"
+  ],
+  "tldr": "Masked diffusion LMs are shown highly sensitive to one-position token shifts; a CTC-style alignment-flexible SFT objective fixes it."
+ },
+ "152480": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "graph",
+   "molecule"
+  ],
+  "tldr": "Graph Energy Matching: JKO-inspired discrete energy-based model for graph generation that matches discrete diffusion baselines while enabling composable, constrained sampling."
+ },
+ "152485": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm"
+  ],
+  "tldr": "Training-free DLM acceleration that keeps region-specific numbers of suffix tokens and reuses prior-step predictions in suffix representations, reaching up to 72x speedup."
+ },
+ "152499": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152503": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152504": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152511": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152515": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152521": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "dfm",
+   "masked",
+   "protein"
+  ],
+  "tldr": "CPFlow co-designs full-atom cyclic peptides with masked autoregressive flow matching, cyclization-aware positional encodings and test-time scaling."
+ },
+ "152529": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152550": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152551": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152584": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152592": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "theory",
+   "masked",
+   "uniform"
+  ],
+  "tldr": "GEXIT-based conservation laws write data-model cross-entropy as an integral along the noise path, unifying likelihoods for masked, uniform, Gaussian and Poisson diffusion."
+ },
+ "152594": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Shows dLLM reasoning gains come from jointly predicting undecoded tokens acting as latent tokens, enabling a speed-quality knob and improving AR via multi-token prediction."
+ },
+ "152595": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152596": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "dllm",
+   "distillation",
+   "masked"
+  ],
+  "tldr": "Forward-KL distillation fails for masked diffusion language models; an off-policy-to-on-policy trajectory objective with confidence reweighting lets students surpass their teachers."
+ },
+ "152598": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152630": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152632": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "masked",
+   "guidance"
+  ],
+  "tldr": "Primal-dual guided decoding biases unmasking logits with mirror-descent Lagrange multipliers, enforcing multiple global constraints on discrete diffusion with formal violation bounds and no retraining."
+ },
+ "152646": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "uniform",
+   "masked"
+  ],
+  "tldr": "DMax unifies masked and uniform training so decoding becomes progressive embedding-space self-refinement, enabling aggressive parallel decoding without quality loss."
+ },
+ "152653": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152655": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152661": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152704": {
+  "rel": "related",
+  "cat": "multimodal",
+  "tags": [],
+  "tldr": "Analyzes why continuous flow matching struggles on discrete segmentation labels and adds a distance-aware vector-field correction with quasi-random class encodings."
+ },
+ "152710": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152718": {
+  "rel": "related",
+  "cat": "sampling",
+  "tags": [
+   "block"
+  ],
+  "tldr": "D-PACE reweights per-position training losses of parallel block (diffusion-based) speculative drafters by expected acceptance length, improving accepted length and speedup."
+ },
+ "152724": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "theory"
+  ],
+  "tldr": "Diffusion LMs lose alignment more slowly than AR models under counter-aligned fine-tuning, explained by a template-wise compression theory of masked denoising."
+ },
+ "152737": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "graph",
+   "molecule"
+  ],
+  "tldr": "MolHIT generalizes discrete graph diffusion with hierarchical chemical-prior categories and decoupled atom encoding, reaching near-perfect molecular validity."
+ },
+ "152746": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "SIGMA allocates token- and trajectory-level diversity via a sigmoid gate and adaptive temperature, improving test-time scaling for diffusion language models."
+ },
+ "152766": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152767": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "caching"
+  ],
+  "tldr": "EntropyCache uses decoded-token entropy as a constant-cost staleness signal to decide when to refresh approximate KV caches in diffusion LLMs."
+ },
+ "152773": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152781": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152784": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152786": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152801": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152804": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152809": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152862": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152866": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152871": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "List-wise recommendation reranker that iteratively denoises slots, filling the most confident first, unifying AR and non-AR rerankers as special cases."
+ },
+ "152878": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "protein",
+   "masked",
+   "guidance"
+  ],
+  "tldr": "Test-time alignment for discrete diffusion inverse folding that learns sparse Fourier value functions to choose which positions to remask and resample."
+ },
+ "152896": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152921": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152931": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152932": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152945": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152957": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152987": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "continuous-text",
+   "protein"
+  ],
+  "tldr": "Learning a latent space that redistributes information evenly makes standard latent diffusion work for antibody sequence generation with loop infilling and chain control."
+ },
+ "152991": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "152994": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153024": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153054": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "block"
+  ],
+  "tldr": "dMoE routes experts at the block level in MoE dLLMs, cutting uniquely activated experts from 69.5 to 16.6 and reducing memory and latency."
+ },
+ "153058": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153062": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153078": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153086": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153090": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153138": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "DAWN speeds up diffusion LLM inference 1.8-8x by using token dependency graphs to pick which masked positions to unmask in parallel."
+ },
+ "153140": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153145": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "block"
+  ],
+  "tldr": "SimSD inserts draft reference tokens with a tailored attention mask so diffusion LLMs can run standard token-level speculative verification, reaching 7.5x throughput gains."
+ },
+ "153158": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "StepRefine detects entropy-spike denoising steps in multimodal diffusion LMs and switches to continuous probability-weighted embedding refinement there, reducing hallucinations."
+ },
+ "153162": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153185": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "unified-mm",
+   "speech"
+  ],
+  "tldr": "Pretrains a 3B tri-modal masked diffusion model on text, image and audio from scratch, studying critical batch size, scaling laws and design choices."
+ },
+ "153197": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153274": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153296": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153298": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153341": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153373": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153377": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153379": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "molecule"
+  ],
+  "tldr": "Coupling-aware time schedules and confidence-guided acceleration jointly speed hybrid discrete atom-type and continuous coordinate diffusion sampling 18-20x for structure-based drug design."
+ },
+ "153411": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153418": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153434": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "dna",
+   "guidance"
+  ],
+  "tldr": "GOLD co-diffuses discrete RNA sequence and continuous side-chain geometry in a shared VAE latent space with gradient-guided physical sampling."
+ },
+ "153438": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "dllm",
+   "guidance"
+  ],
+  "tldr": "Global Context Guidance steers diffusion LLM denoising in feature space toward underused global context, outperforming weak-model guidance at lower cost."
+ },
+ "153441": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153460": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153469": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153473": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153481": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153495": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153496": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153501": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153503": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "MemDLM adds a parametric memory channel via bi-level optimization that embeds simulated denoising trajectories into diffusion-LM training, speeding convergence and strengthening long context."
+ },
+ "153583": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153596": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153623": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153630": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153661": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153666": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "continuous-text",
+   "masked"
+  ],
+  "tldr": "Discrete Stochastic Localization gives continuous-state sequence diffusion an SNR-invariant denoiser on sphere embeddings, with masked diffusion a special case; fine-tuned MDLM improves MAUVE."
+ },
+ "153668": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [
+   "edit-insert"
+  ],
+  "tldr": "Autoregressive models emit pointer-addressed insert/delete/replace/move edits within the causal token stream, enabling localized revision alongside ordinary generation."
+ },
+ "153673": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "masked",
+   "rl",
+   "dllm"
+  ],
+  "tldr": "DiSPO adds intermediate-state credit assignment to RL for masked diffusion language models by branching and scoring resampled masked positions."
+ },
+ "153677": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153682": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153689": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153691": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153704": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153705": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153708": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153715": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "uniform",
+   "masked",
+   "theory"
+  ],
+  "tldr": "Shows the plug-in parameterization of uniform diffusion is optimized by a leave-one-out posterior, yielding conversion formulas, a predictor-corrector scheme and absorbing-state reformulation."
+ },
+ "153722": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "dllm",
+   "distillation",
+   "rl"
+  ],
+  "tldr": "d-OPSD adapts on-policy self-distillation to diffusion LLMs using self-generated answers as suffix conditioning and step-level rather than token-level supervision."
+ },
+ "153740": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153741": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153749": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153771": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "dfm",
+   "ctmc",
+   "rl"
+  ],
+  "tldr": "Extends flow matching to discrete-action offline RL via CTMCs trained with a Q-weighted discrete flow matching objective, including factorized multi-agent paths."
+ },
+ "153786": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153789": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153806": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153818": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "dfm",
+   "edit-insert",
+   "molecule"
+  ],
+  "tldr": "pCoMole steers pretrained Edit Flows via a Doob h-transform toward Pareto-optimal, feasibility-gated biomolecular edits, validated by shortened fluorescent eGFP variants."
+ },
+ "153855": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Masked-diffusion outer decoder for unsourced random access with Tanner-graph parity propagation and quality-guided remasking, beating BP decoders in accuracy and speed."
+ },
+ "153859": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "FreeDave treats future token predictions as free drafts and self-verifies them, giving provably lossless parallel decoding up to 5.5x fewer forwards."
+ },
+ "153860": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153861": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153866": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153901": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "protein",
+   "guidance"
+  ],
+  "tldr": "Training-free protein engineering that picks reward-informed anchor residues and decodes tilted per-site distributions, inspired by anchored remasking in discrete diffusion."
+ },
+ "153907": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "masked",
+   "guidance"
+  ],
+  "tldr": "SearchDiff injects informed search into masked diffusion denoising, steering each reverse transition toward probable and constraint-satisfying solutions without any training."
+ },
+ "153919": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153937": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [
+   "continuous-text"
+  ],
+  "tldr": "Token Time Continuous Diffusion models text in continuous space with per-token noise schedules, beating discrete diffusion LMs at high speedups."
+ },
+ "153942": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153943": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153945": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "TABALIGN shows diffusion LMs give permutation-stable cell attention on tables and uses a masked DLM planner with an attention verifier."
+ },
+ "153949": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "153956": {
+  "rel": "related",
+  "cat": "multimodal",
+  "tags": [
+   "image-tokens"
+  ],
+  "tldr": "BitDance generates high-entropy binary visual tokens with a continuous diffusion head and next-patch parallel decoding for fast autoregressive image generation."
+ },
+ "153970": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154007": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "masked",
+   "dllm",
+   "code"
+  ],
+  "tldr": "Post-training that supervises corrupted visible tokens gives masked DLMs error-aware confidence for in-place correction and better parallel decoding; adds a Code Revision Benchmark."
+ },
+ "154013": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [],
+  "tldr": "One-step discrete generator that learns a coupling between sequences and Gaussian latents and trains a decoder to invert it, beating one-step baselines."
+ },
+ "154026": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "block"
+  ],
+  "tldr": "Multi-token Residual Prediction predicts the logit residual between adjacent denoising steps from hidden states, enabling dependency-aware multi-token unmasking and lossless speculative speedups."
+ },
+ "154030": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154056": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Goliath is the first gradient-inversion attack on mixed tabular diffusion, jointly recovering rows, timesteps and the discrete mask patterns corrupting categorical columns."
+ },
+ "154060": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "dllm"
+  ],
+  "tldr": "Diffusion Fine-Tuning lets diffusion-LLM vision-language models jointly denoise hierarchical coordinate digits, improving polygon and 3D grounding over autoregressive vertex decoding."
+ },
+ "154064": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154072": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "theory"
+  ],
+  "tldr": "Systematic study showing memorization in diffusion language models grows monotonically with sampling resolution, yet leaks less PII than autoregressive models."
+ },
+ "154098": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154106": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154120": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154121": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154136": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154141": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154147": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "dfm",
+   "ctmc",
+   "speech"
+  ],
+  "tldr": "Kinetic-optimal scheduling plus finite-step moment correction make metric-induced discrete flow matching practical for codec-based zero-shot text-to-speech."
+ },
+ "154152": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "DynaManifold-SAE finds sparse autoencoder feature groups forming time-dependent concept manifolds that predict token reveal order and confidence during LLaDA unmasking."
+ },
+ "154194": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154200": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "simplex",
+   "graph"
+  ],
+  "tldr": "Simplex denoising with a non-Markovian noising scheme on the probability simplex beats discrete diffusion and flow matching baselines on graph generation."
+ },
+ "154221": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [],
+  "tldr": "Generates permutations with standard Euclidean score diffusion on centered vectors that are sorted at the end, avoiding specialized discrete permutation diffusion."
+ },
+ "154231": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154265": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [],
+  "tldr": "E0 generates quantized robot action tokens with Tweedie discrete diffusion inside VLA models, beating continuous and masking-based baselines on manipulation benchmarks."
+ },
+ "154272": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154275": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154281": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "unified-mm"
+  ],
+  "tldr": "Couples text and image masked-diffusion Markov jump processes via cross-modal confidence-dependent rates and remasking jumps for self-correcting joint multimodal generation."
+ },
+ "154289": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154292": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154301": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154317": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154331": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154346": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154353": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Masked diffusion log-likelihoods depend on decoding order; averaging over orders (OMS) improves reranking on Sudoku and protein stability prediction."
+ },
+ "154361": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154362": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "masked",
+   "uniform",
+   "guidance"
+  ],
+  "tldr": "Langevin-inspired proposals enable gradient-informed posterior sampling for inverse problems directly in discrete state space with masked or uniform diffusion priors."
+ },
+ "154399": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154400": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154408": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "dfm",
+   "ctmc",
+   "theory"
+  ],
+  "tldr": "Non-asymptotic KL and total-variation convergence bounds for two discrete flow matching models, requiring only an approximation-error assumption and improving vocabulary-size dependence."
+ },
+ "154410": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "DL-Eraser unlearns knowledge in diffusion LLMs by suppressing target recoverability under high-mask conditioning while confining updates to a utility-preserving subspace."
+ },
+ "154418": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154425": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154445": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154461": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154464": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154474": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154492": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154505": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154509": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Trains masked diffusion models to both unmask and correct already-decoded tokens, interleaving corrective refinement steps for better quality-speed trade-offs."
+ },
+ "154511": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154552": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154563": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154580": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154591": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154600": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154608": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154616": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154618": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154622": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "dfm",
+   "protein",
+   "molecule"
+  ],
+  "tldr": "Active Flow Matching enables variational black-box optimization with discrete flow models via KL objectives on endpoint distributions, improving protein and molecule design."
+ },
+ "154632": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154640": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154643": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154650": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "rl",
+   "dllm"
+  ],
+  "tldr": "Derives a stepwise policy gradient over the denoising MDP of DLMs, with entropy-guided step selection and one-step-completion advantages for RL post-training."
+ },
+ "154651": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "graph"
+  ],
+  "tldr": "Janus generates hypergraphs by paired latent diffusion over coupled node and hyperedge representations from a dual-view beta-VAE, supporting node-set-constrained generation."
+ },
+ "154666": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154676": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154716": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [
+   "continuous-text"
+  ],
+  "tldr": "Cola DLM: hierarchical continuous latent diffusion LM with a text VAE and block-causal DiT prior, scaling competitively against matched AR and LLaDA baselines."
+ },
+ "154725": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "caching"
+  ],
+  "tldr": "Fast-dLLM++ picks parallel commit sets from the full sorted confidence profile rather than the weakest token, raising diffusion LLM throughput up to 37%."
+ },
+ "154726": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "theory",
+   "uniform"
+  ],
+  "tldr": "Information-theoretic analysis shows redundant stochastic transitions provably contract sampling error in discrete diffusion, motivating a churn-and-restart sampler with better speed-quality tradeoffs."
+ },
+ "154730": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154733": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154781": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154788": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154799": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "caching"
+  ],
+  "tldr": "Polestar uses token representation drift to refresh stale KV-cache entries and decide token commitment, improving dLLM accuracy-throughput trade-offs without training."
+ },
+ "154800": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154803": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154808": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154810": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [],
+  "tldr": "Asynchronous per-token discrete denoising under a Markov bridge for bundle recommendation, with entropy-guided schedules letting confident slots resolve first."
+ },
+ "154818": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154837": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "dllm"
+  ],
+  "tldr": "Time-annealed perturbation sampling exploits that early denoising steps set semantics, boosting diffusion LM output diversity without hurting quality or reasoning."
+ },
+ "154839": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154863": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154873": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "First-step denoising confidence peaks near the true infilling length; calibrating its length bias yields training-free adaptive-length infilling for diffusion LMs."
+ },
+ "154895": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154905": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154954": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154978": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154984": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "154985": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "image-tokens"
+  ],
+  "tldr": "Scales masked discrete diffusion to high-resolution text-to-image, adding token editing for self-correction and a grouped cross-entropy loss for large image-token vocabularies."
+ },
+ "155007": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155012": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Frequency-aware remasking keeps frequently-changing tokens refinable and is applied adaptively only to hard questions, improving diffusion LLM test-time scaling."
+ },
+ "155031": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155032": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155037": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155044": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "dllm"
+  ],
+  "tldr": "Finds MoE diffusion LLM experts specialize by mask rate and proposes mask-rate-conditioned gradient masking for better MoE-DLM fine-tuning."
+ },
+ "155045": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155079": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155080": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155088": {
+  "rel": "related",
+  "cat": "theory",
+  "tags": [],
+  "tldr": "Diffusion (DiT) and GPT models on rule-based discrete tasks learn rules and memorize at distinct timescales, defining a dataset-dependent innovation window."
+ },
+ "155092": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155107": {
+  "rel": "core",
+  "cat": "control",
+  "tags": [
+   "masked",
+   "guidance",
+   "theory"
+  ],
+  "tldr": "Backtracking random walk sampler for masked diffusion that unmasks and remasks guided by rewards, provably robust with quadratic rather than exponential complexity."
+ },
+ "155130": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155135": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155136": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155151": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155163": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155171": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155182": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Explains dLLM jailbreaks through a denoising energy landscape and derives training-free detectors from step-0 logits and trajectory kinetic energy."
+ },
+ "155183": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155198": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155213": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155216": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155218": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Replaces part of masked generative model denoisers with fixed-point solvers over shared layers for adaptive depth, cutting training cost and improving low-budget sampling."
+ },
+ "155224": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155226": {
+  "rel": "related",
+  "cat": "training",
+  "tags": [
+   "continuous-text"
+  ],
+  "tldr": "LDLM jointly trains encoder, latent diffusion model and decoder for text, beating discrete and continuous diffusion LMs on OWT and LM1B while faster."
+ },
+ "155231": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "rl",
+   "image-tokens"
+  ],
+  "tldr": "RL framework for masked image generators that counters confidence-based decoding's exploration collapse via semantic routing sampling and entropy-anchored gradient updates."
+ },
+ "155233": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155255": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155256": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155260": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155302": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "guidance",
+   "dna"
+  ],
+  "tldr": "DNA-CRAFT designs cell-type-specific regulatory DNA by guided search over a discrete diffusion prior trained on natural regulatory elements."
+ },
+ "155308": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155320": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155342": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155354": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155357": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155362": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "masked",
+   "dllm",
+   "molecule"
+  ],
+  "tldr": "ChemDiffAgent is a masked diffusion language agent that denoises interleaved reasoning and tool-use trajectories for chemical tasks, beating autoregressive agents."
+ },
+ "155378": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155389": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "dfm",
+   "molecule",
+   "guidance"
+  ],
+  "tldr": "Coupled objective-guided discrete flows jointly generate multi-component molecular conjugates (PROTACs, peptide-drug conjugates), restricting guided updates to chemically feasible assembly states."
+ },
+ "155406": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "caching"
+  ],
+  "tldr": "Step-dLLM refreshes block-sparse attention masks at anchor denoising steps with head-adaptive budgets, giving 2.78x speedup on LLaDA without retraining."
+ },
+ "155427": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm"
+  ],
+  "tldr": "Dynamic Expert Sharing picks a compact coreset of MoE experts per parallel decoding block, cutting unique expert activations 55% and dLLM latency 38%."
+ },
+ "155431": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155433": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155440": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155453": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "masked",
+   "rl",
+   "dllm"
+  ],
+  "tldr": "FEROM builds a Rao-Blackwellized policy gradient that marginalizes endogenous reveal orders via frontier expansion, improving GRPO-style training of masked diffusion LMs."
+ },
+ "155467": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155470": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "dfm",
+   "ctmc"
+  ],
+  "tldr": "count-FM performs flow matching over count data using continuous-time birth-death processes with local unit jumps, applied to scRNA-seq and spike trains."
+ },
+ "155473": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155475": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155482": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "graph",
+   "guidance"
+  ],
+  "tldr": "Training-free guidance extrapolating denoiser predictions away from structure-degraded ones to improve constraint alignment of diffusion combinatorial optimization solvers like DIFUSCO and T2T."
+ },
+ "155487": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155498": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155503": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "ctmc",
+   "uniform"
+  ],
+  "tldr": "Cyclic Discrete Diffusion refines multi-class segmentation masks via a jump-or-stay label process on a cyclic topology, with spectral-gap analysis of refinement steps."
+ },
+ "155507": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "dllm",
+   "masked"
+  ],
+  "tldr": "Cheap masked-diffusion rollouts are scored step-wise by a process reward model and stitched across trajectories into composite rationales, improving math accuracy up to 23.8%."
+ },
+ "155510": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155520": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155525": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155527": {
+  "rel": "core",
+  "cat": "science",
+  "tags": [
+   "molecule",
+   "rl"
+  ],
+  "tldr": "Controlled study of online adaptation design choices (acquisition, objective, debiasing) for discrete-diffusion molecular optimization under equal oracle budgets."
+ },
+ "155577": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155589": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "edit-insert",
+   "dfm"
+  ],
+  "tldr": "Flow-matching framework where elements branch and die over binary trees, enabling variable-length generation over discrete, continuous and manifold spaces."
+ },
+ "155603": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dfm",
+   "distillation"
+  ],
+  "tldr": "TS-DFM shapes distillation trajectories with an energy compass that picks coherent midpoints, letting 8-step students beat 1024-step discrete flow matching teachers."
+ },
+ "155610": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155616": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155626": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "theory",
+   "masked"
+  ],
+  "tldr": "Theory and experiments on when structured (CRF, clique-tree, HMM circuit) reverse processes improve dLLMs over factorized token denoising."
+ },
+ "155634": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155636": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155723": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155731": {
+  "rel": "related",
+  "cat": "science",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "Inpainting PatternBoost trains a transformer to complete remasked objects in elite extremal-combinatorics constructions, iteratively improving no-three-in-line and circle-packing solutions."
+ },
+ "155765": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155776": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155779": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "TabDLM generates tables with free-form text by combining masked diffusion for text and categorical columns with continuous diffusion for numeric features."
+ },
+ "155789": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155796": {
+  "rel": "core",
+  "cat": "safety",
+  "tags": [
+   "dllm"
+  ],
+  "tldr": "Black-box adaptive jailbreak for diffusion LLMs that searches an evolving library of mask/infill structural patterns, reaching ~79% attack success rate."
+ },
+ "155798": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155812": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155816": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "edit-insert",
+   "dfm",
+   "theory"
+  ],
+  "tldr": "Latent Process Generator Matching learns generators for processes that are deterministic images of tractable Markov processes, subsuming discrete insertion/deletion and branching flows."
+ },
+ "155830": {
+  "rel": "core",
+  "cat": "multimodal",
+  "tags": [
+   "masked",
+   "dllm",
+   "unified-mm"
+  ],
+  "tldr": "VIGOR reorders unmasking in multimodal diffusion LLMs by counterfactual visual gain, reducing premature language-prior commitments and hallucination."
+ },
+ "155843": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155844": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155851": {
+  "rel": "core",
+  "cat": "sampling",
+  "tags": [
+   "dllm",
+   "masked",
+   "benchmark"
+  ],
+  "tldr": "Pareto comparison finds confidence-based remasking methods (WINO, Saber, COVER) match plain confidence unmasking at typical block lengths, with the base dLLM being the real bottleneck."
+ },
+ "155860": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155867": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155875": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155890": {
+  "rel": "core",
+  "cat": "reasoning",
+  "tags": [
+   "masked",
+   "rl",
+   "unified-mm"
+  ],
+  "tldr": "HT-GRPO stages reinforcement learning for diffusion multimodal LLMs into global, structure and refinement phases with hierarchical credit assignment over unmasking order."
+ },
+ "155906": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155930": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155931": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155940": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155975": {
+  "rel": "core",
+  "cat": "apps",
+  "tags": [
+   "masked"
+  ],
+  "tldr": "FSMD applies masked diffusion over the whole user history plus Top-K list, jointly denoising entire recommendation lists with a listwise ranking objective."
+ },
+ "155978": {
+  "rel": "core",
+  "cat": "theory",
+  "tags": [
+   "masked",
+   "block",
+   "theory"
+  ],
+  "tldr": "TUBE provides a variational upper bound on log-likelihood for masked diffusion, any-order autoregressive and block models, showing autoregressive models still dominate."
+ },
+ "155983": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "155986": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "dfm"
+  ],
+  "tldr": "Bernoulli Flow Models replace discrete Markov chains for binary data with a continuous Bernoulli probability flow having closed-form multi-step posteriors, enabling self-consistent low-NFE sampling."
+ },
+ "156015": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156021": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156023": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156053": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156094": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156096": {
+  "rel": "core",
+  "cat": "training",
+  "tags": [
+   "ctmc",
+   "uniform"
+  ],
+  "tldr": "Parameterizes CTMC discrete diffusion via separate exit-rate and jump-distribution heads, giving a Poisson-plus-categorical KL ELBO that improves uniform diffusion."
+ },
+ "156098": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156119": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156137": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156139": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156634": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ },
+ "156742": {
+  "rel": "exclude",
+  "cat": null,
+  "tags": [],
+  "tldr": ""
+ }
+}

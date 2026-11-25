@@ -1,0 +1,8 @@
+{
+  "_note": "Hand corrections applied on top of data/classification.json. Keys are NeurIPS poster ids. Set rel to core, related or exclude; any field given here replaces the classifier's value.",
+  "152067": {"rel": "core", "cat": "training", "tags": ["continuous-text", "dllm"], "tldr": "RePlaid, a continuous diffusion LM aligned with modern discrete DLMs, matches Duo and beats MDLM when over-trained, with the first competitive continuous-DLM scaling law."},
+  "150638": {"rel": "related"},
+  "154056": {"rel": "related"},
+  "148382": {"rel": "related"},
+  "151485": {"rel": "exclude"}
+}
